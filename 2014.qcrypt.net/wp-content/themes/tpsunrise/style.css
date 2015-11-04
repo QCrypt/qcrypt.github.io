@@ -1,0 +1,786 @@
+/**
+ * Theme Name: tpSunrise
+ * Theme URI: http://www.tekpals.com/tpsunrise
+ * Description: tpSunrise is a 3 column theme with a vertical menu on the left. The theme supports a widgetized sidebar on right and a flexible center column that automatically adjusts for the window width. The theme supports different header and sidebar styles for the home page. Requires WordPress 3.0+
+ * Version: 1.2.7
+ * Author: <a href="http://www.tekpals.com">Ed Ehrgott</a>
+ * Author URI: http://www.tekpals.com
+ * Tags: brown, orange, three-columns, right-sidebar, flexible-width, custom-menu, custom-header, custom-background, translation-ready, editor-style, sticky-post, theme-options
+ * License: GNU General Public License v2.0
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+img { border: none; }
+
+/*** common styling ***/
+html,body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #646464;
+	height: 100%;
+	font-style: normal;
+	font-weight: normal;
+	font-size: small;
+}
+h1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #646464;
+	font-size: large;
+}
+h2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #646464;
+	font-size: medium;
+}
+h3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #646464;
+	font-size: small;
+}
+hr {
+    color: #180509;
+}
+a {
+   color: #000;
+}
+.center {
+	text-align: center;
+}
+.text_box {
+	border-style: solid;
+	border-width: 1px;
+	padding: 4px;
+}
+.indent1 {
+	margin-left: 40px;
+}
+.indent2 {
+	margin-left: 80px;
+}
+.indent3 {
+	margin-left: 120px;
+}
+.caption {
+    font-size: x-small;
+}
+/*** table styling calendar widget overrides some styling) ***/
+table {
+   border-width: 1px;
+   border-spacing: 0;
+   border-color: #180509;
+   font-style: normal;
+   font-weight: normal;
+   font-size: small;
+   width: 90%
+}
+table th {
+	border-width: 1px;
+	padding: 3px;
+	border-style: solid;
+    color: #fffff4;
+	background: #180509;
+}
+table td {
+	border-width: 1px;
+	padding: 2px;
+	border-style: solid;
+	border-color: #180509;
+}
+ins {
+	background: #ffc;
+	border: none;
+	color: #333;
+	text-decoration: none;
+}
+/*** page layout div styling ***/
+#masthead {
+
+}
+#header_text {
+	position: absolute;
+	top: 35px;
+	left: 40px;
+	width: 950px;
+}
+#masthead a {
+	color: #fffff4;
+	font-size: 1.7em;
+	text-decoration: none;
+}
+#masthead h2 {
+	color: #fffff4;
+	font-size: 1.2em;
+}
+#headerimg {
+   margin-left: auto;
+   margin-right: auto;
+}
+/*** wrappers used to provide column effect ***/
+#wrapper1 {
+	position: relative;
+	text-align: left;
+	width: 100%;
+ min-width: 950px;
+}
+}
+#wrapper2 {
+	float: left;
+	position: relative;
+	text-align: left;
+	width: 100%;
+	background-image: none;
+	background-repeat: repeat-y;
+	background-position: top left;
+}
+#container {
+	min-width: 950px;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+/*** primary page/post content ***/
+#page_content {
+	position: relative;
+	overflow: hidden;
+    	background: #fff;
+	top: 0px;
+	padding: 0 15px;
+	line-height: 1.4em;
+}
+.page-link {
+    clear: both;
+    padding-top: 10px;
+}
+.edit-link {
+    clear: both;    
+}
+#comments {
+   position:relative;
+   clear:both;
+}
+#left_col {
+	position: relative;
+	float: left;
+	top: 0px;
+	left: 0px;
+	margin: 0px 0 -10px 0;
+	z-index: 100;
+	font-size: small;
+	width: 210px;
+}
+#left_col table {
+    text-align: center;
+}
+#left_col td {
+    border-style: none;
+}
+#left_col ul {
+	padding: 0px 0px 15px 0px;
+      font-size: 1.0em;
+	margin: 0px;
+	}
+	
+#left_col ul li {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	}
+	
+#left_col ul li a {
+	color: #EEEEEE;
+	text-decoration: none;
+	}
+
+#left_col ul li a:hover {
+	color: #EEEEEE;
+	font-weight: bold;
+	}
+
+#left_col ul li.current-menu-item {
+	color: #EEEEEE;
+	font-weight: bold;
+	}
+
+#right_col {
+	position: relative;
+    	background: #fff;
+	top: 0px;
+	right: 0px;
+	margin: 0px 0 -10px 0;
+	width: 190px;
+	float: right;
+	font-size: small;
+	padding: 10px;
+	z-index: 99;
+	line-height: 1.4em;
+	text-align: center;
+}
+#right_col table {
+    text-align: center;
+}
+#right_col td {
+    border-style: none;
+}
+#right_col ul {
+
+    font-size: 1.0em;
+	margin: -15px;
+	padding: 0px 0px 10px 0px;
+	}
+	
+#right_col ul li {
+	list-style: none;
+	margin: 0px;
+	padding: 7px 0px 7px 0px;
+	}
+	
+#right_col ul li a {
+	color: #507AA5;
+	text-decoration: none;
+	}
+
+#right_col ul li a:hover {
+	color: #507AA5;
+	text-decoration: underline;
+	}
+#footer {
+    clear: both;
+    height: 0px;
+    width: 100%;
+    background-image: url('images/footer_bg2.gif');
+}
+#footer_txt {
+	background-image: url('images/footer_bg1.gif');
+	height: 0px;
+	color: #000000;
+	font-size: x-small;
+	text-align: center;
+	line-height: 30px;
+
+}
+/*** navigation section ***/
+.pagenav {
+   text-align: center;
+}
+.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style:	none;
+}
+.sf-menu {
+	line-height: 1.0;
+}
+.sf-menu ul {
+	position: absolute;
+	top: -999em;
+	width: 10em; /* left offset of submenus need to match (see below) */
+}
+.sf-menu ul li {
+	width: 100%;
+}
+.sf-menu li:hover {
+	visibility:	inherit; /* fixes IE7 'sticky bug' */
+}
+.sf-menu li {
+	float: left;
+	position: relative;
+}
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+.sf-menu li:hover ul, .sf-menu li.sfHover ul {
+	left: 0;
+	top: 2.5em; /* match top ul list item height */
+	z-index: 99;
+}
+ul.sf-menu li:hover li ul, ul.sf-menu li.sfHover li ul {
+	top: -999em;
+}
+ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul {
+	left: 13em; /* match ul width */
+	top: 0;
+}
+ul.sf-menu li li:hover li ul, ul.sf-menu li li.sfHover li ul {
+	top: -999em;
+}
+ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul {
+	left:	10em; /* match ul width */
+	top: 0;
+}
+/*** MENU SKIN ***/
+.sf-menu {
+	float: left;
+	margin-bottom: 1em;
+}
+.sf-menu a {
+	border-left: 1px solid #fff;
+	border-top: 1px solid #40706b; /*#CFDEFF;*/
+	padding: .75em 1em;
+	text-decoration: none;
+}
+.sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text color*/
+	color: #13a;
+}
+.sf-menu li {
+	background: #518C86; /* url(images/gradient_31.gif);*/
+}
+.sf-menu li li {
+	background: #518C86; /* #6b9371;*/
+}
+.sf-menu li li li {
+	background: #518C86;
+
+}
+.sf-menu li:hover, .sf-menu li.sfHover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+	background: #629792;
+	outline: 0;
+}
+/*** superfish vertical menu ***/
+.sf-vertical, .sf-vertical li {
+	width: 200px;
+}
+.sf-vertical, .sf-vertical li li {
+	width: 200px;
+	position: relative;
+	overflow:visible !important;
+}
+/* this lacks ul at the start of the selector, so the styles from the main CSS file override it where needed */
+.sf-vertical li:hover ul, .sf-vertical li.sfHover ul {
+	left:	13em; /* match ul width */
+	top: 0;
+}
+
+/*** alter arrow directions ***/
+.sf-vertical .sf-sub-indicator { background-position: -10px 0; } /* IE6 gets solid image only */
+.sf-vertical a > .sf-sub-indicator { background-position: 0 0; } /* use translucent arrow for modern browsers*/
+
+/* hover arrow direction for modern browsers*/
+.sf-vertical a:focus > .sf-sub-indicator,
+.sf-vertical a:hover > .sf-sub-indicator,
+.sf-vertical a:active > .sf-sub-indicator,
+.sf-vertical li:hover > a > .sf-sub-indicator,
+.sf-vertical li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+/*** navigation sub menu indicators ***/
+.sf-menu a.sf-with-ul {
+	padding-right: 2.25em;
+	min-width: 1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+.sf-sub-indicator {
+	position: absolute;
+	display: block;
+	right: .75em;
+	top: 1.05em; /* IE6 only */
+	width: 10px;
+	height: 10px;
+	text-indent: -999em;
+	overflow: hidden;
+	background: url('images/arrows-ffffff.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+a > .sf-sub-indicator {  /* give all except IE6 the correct values 
+	top:			.8em;
+	background-position: 0 -100px; /* use translucent arrow for modern browsers */
+}
+/* apply hovers to modern browsers */
+a:focus > .sf-sub-indicator,
+a:hover > .sf-sub-indicator,
+a:active > .sf-sub-indicator,
+li:hover > a > .sf-sub-indicator,
+li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+ul.sub-menu {
+   width: 215px;
+}
+/* point right for anchors in subs */
+.sf-menu ul .sf-sub-indicator { background-position:  -10px 0; }
+.sf-menu ul a > .sf-sub-indicator { background-position:  0 0; }
+/* apply hovers to modern browsers */
+.sf-menu ul a:focus > .sf-sub-indicator,
+.sf-menu ul a:hover > .sf-sub-indicator,
+.sf-menu ul a:active > .sf-sub-indicator,
+.sf-menu ul li:hover > a > .sf-sub-indicator,
+.sf-menu ul li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+.sf-shadow ul {
+	background:	url('images/shadow.png') no-repeat bottom right;
+	padding: 0 85px 9px 0;
+	-moz-border-radius-bottomleft: 17px;
+	-moz-border-radius-topright: 17px;
+	-webkit-border-top-right-radius: 17px;
+	-webkit-border-bottom-left-radius: 17px;
+}
+.sf-shadow ul.sf-shadow-off {
+	background: transparent;
+}
+/*** end navigation section ***/
+
+/*** magazine page template styling ****/
+#recent_posts {
+    border-top: 1px solid #180509;
+    padding: 4px;
+}
+#recent_posts_meta {
+    font-size: 75%;
+}
+.recent_posts_title {
+    font-size: 130%;
+}
+.recent_posts_item {
+    width: 45%;
+    display: block;
+    border-bottom: 1px solid #180509;
+    padding: 10px 5px 10px 5px;
+}
+#recent_posts li {
+    list-style: none;
+    margin: 0 0 20px 0;
+}
+#recent_posts li:nth-child(even) {
+    float: left;
+    clear: both;
+}
+#recent_posts li:nth-child(odd) {
+    float: right;
+}
+
+/*** WordPress image styling ***/
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+}
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+.alignleft, img.alignleft, a img.alignleft {
+	display: block;
+	float: left;
+	padding-right: 5px;
+	border: none;
+}
+.alignright, img.alignright, a img.alignright {
+	display: block;
+	float: right;
+	padding-left: 5px;
+	border: none;
+}
+.aligncenter, img.aligncenter, a img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+}
+
+/*** WordPress gallery styling ***/
+/* The Gallery container (div) */
+.gallery { }
+ 
+/* A Gallery item container,
+ for 3, 2, 4, & 6 column galleries */
+.gallery .gallery-item { }
+.gallery-columns-2 .gallery-item { }
+.gallery-columns-4 .gallery-item { }
+.gallery-columns-5 .gallery-item { }
+.gallery-columns-6 .gallery-item { }
+
+/* The actual image inside a container
+for 3, 2, 4, 5 & 6 column galleries */
+.gallery img { }
+.gallery-columns-2 .attachment-medium { }
+.gallery-columns-4 .attachment-thumbnail { }
+.gallery-columns-5 .attachment-thumbnail { }
+.gallery-columns-6 .attachment-thumbnail { }
+ 
+/* A gallery image caption */
+.gallery .gallery-caption { }
+ 
+/* Definition lists elements */
+.gallery dl, .gallery dt { }
+ 
+/* Pick the second line break if two
+line breaks are adjacent */
+.gallery br+br { }
+
+.gallery { margin: 0 auto 18px; }
+.gallery .gallery-item {
+    float: left;
+    margin-top: 15px;
+    text-align: center;
+    width: 33%;
+}
+.gallery-columns-2 .gallery-item { width: 50%; }
+.gallery-columns-4 .gallery-item { width: 25%; }
+.gallery-columns-5 .gallery-item { width: 20%; }
+.gallery-columns-6 .gallery-item { width: 16%; }
+.gallery img {
+    box-shadow: 0px 0px 4px #999;
+    border: 1px solid white;
+    padding: 8px;
+    background: #f2f2f2;
+}
+.gallery img:hover {
+    background: white;
+}
+.gallery-columns-2 .attachment-medium {
+    max-width: 92%;
+    height: auto;
+}
+.gallery-columns-4 .attachment-thumbnail {
+    max-width: 84%;
+    height: auto;
+}
+.gallery-columns-5 .attachment-thumbnail {
+    max-width: 78%;
+    height: auto;
+}
+.gallery-columns-6 .attachment-thumbnail {
+    max-width: 72%;
+    height: auto;
+}
+.gallery .gallery-caption {
+    color: #888;
+    font-size: 12px;
+    margin: 0 0 12px;
+}
+.gallery dl, .gallery dt {
+    margin: 0;
+}
+.gallery br+br {
+    display: none;
+}
+.gallery-image-link a {
+   font-size: 2.0em;
+   text-decoration: none;
+   vertical-align: -35px;
+   color: #180509;
+}
+
+/*** aside styling ***/
+.format-aside h1 {
+   display: none;
+}
+.format-aside .contentdate {
+   display: none;
+}
+
+/*** link styling ***/
+.format-link .contentdate {
+   background: url(images/link-image.jpg);
+   width: 68px;
+}
+.format-link .contentdate h3 {
+   display: none;
+}
+.format-link .contentdate h4 {
+   display: none;
+}
+
+/*** ststus styling ***/
+
+
+/*** other WordPress styling ***/
+blockquote{
+	margin: 0px 25px 15px 25px;
+	padding: 0px 25px 0px 10px;
+	background: #FFF575;
+	border-top: 2px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+.contentdate {    
+   background: url(images/cal.png);
+   float: left;
+   width: 45px;
+   height: 50px;
+   margin: 0 10px 0 0;
+   padding: 0;
+}
+.contentdate h3 {
+   font-family: Arial, Helvetica, sans-serif;
+   color: #FFFFFF;
+   font-size: 10px;
+   font-weight: normal;
+   padding: 1px 0px 0px 4px;
+   margin: 0px;
+   text-transform: uppercase;
+}
+.contentdate h4 {
+   font-family: Arial, Helvetica, sans-serif;
+   color: #666666;
+   font-size: 21px;
+   font-weight: bold;
+   padding: 5px 4px 0px 0px;
+   margin: 0px;
+   text-align: center;
+}
+.contenttitle {
+   position: relative;
+   margin: 0px;
+   padding: 0px;
+   color: #000000;
+}
+.postspace {
+	background: url(images/spacer.png);
+	width: 300px;
+	height: 32px;
+	margin: 0px;
+	padding: 0px;
+	clear: both;
+}
+.pagenav {
+     margin-bottom: 15px;
+}
+.sticky {
+	background: #F5DEB3;
+	padding: 5px 5px 5px 5px;
+}
+/*** comment styling ***/
+.commentlist ul {
+   list-style: none;    
+}
+.commentlist .odd {
+   background-color: #F9DFA9;
+   padding: 10px;
+   margin-bottom: 10px;
+}
+.commentlist .even {
+   background-color: #f1bd76;
+   padding: 10px;
+   margin-bottom: 10px;
+}
+.commentlist .bypostauthor {
+   border-style: solid;
+   border-width: 1px;
+   padding: 4px;
+}
+.comment-form-comment label {
+   display: block;
+}
+.comment-form-comment textarea {
+   width: 90%;
+}
+
+/*Tentative Program Style*/
+
+.schedule-table{
+   color:#000;
+   width:100%;
+}
+/*Add Padding to Cells*/
+.schedule-table td{
+   padding:10px;
+   border-width:0px;
+}
+/*Bold Titles*/
+.schedule-table .title{
+   font-weight: bold;
+   text-shadow: 0px 1px 1px #ccc;
+}
+/*Center Times*/
+.schedule-table .time-td{
+   text-align:center;
+   vertical-align:text-top;
+   width:75px;
+}
+/*Format Abstract*/
+.schedule-table div.abstract{
+   background:#fff;
+   border:1px solid #AAA;
+   padding:8px;
+   margin-top:5px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   display:none;
+   text-align:justify;
+}
+/*Format Links*/
+.schedule-table .abst-click{
+   display:inline-block;
+   padding:0 15px 0 15px;
+   background: url('../../uploads/1370474136_arrow_state_grey_expanded.png') center left no-repeat;
+   min-height:20px;
+}
+.schedule-table .up{
+   display:inline-block;
+   background: url('../../uploads/1370474136_arrow_state_grey_expanded_up.png') center left no-repeat;
+   min-height:20px;
+}
+.schedule-table .ppt{
+   display:inline-block;
+   padding:0 15px 0 20px;  
+   background: url('../../uploads/pptx.png') center left no-repeat; 
+   background-size:20px 20px;
+   min-height:20px;
+}
+.schedule-table .key{
+   display:inline-block;
+   padding:0 15px 0 21px;  
+   background: url('../../uploads/keynote.png') center left no-repeat; 
+   background-size:20px 20px;
+   min-height:20px;
+}
+.schedule-table .pdf{
+   display:inline-block;
+   padding:0 15px 0 21px;  
+   background: url('../../uploads/pdf.png') center left no-repeat; 
+   background-size:20px 20px;
+   min-height:20px;
+}
+.schedule-table .video{
+   display:inline-block;
+   padding:0 15px 0 22px;  
+   background: url('../../uploads/video.png') center left no-repeat; 
+   background-size:20px 20px;
+   min-height:20px;
+}
+.schedule-table tr.talk td{
+   background: #FFF;
+   border-top: 1px solid #DDD;
+}
+.schedule-table tr.talk-no-border td{
+   background: #FFF;
+   border-top: 1px solid #FFF;
+}
+.schedule-table tr.food td{
+   background: #FFDFBF;
+   border-top: 1px solid #FFF;
+}
+.schedule-table tr.other td{
+   background: #C4E9FF;
+   border-top: 1px solid #FFF;
+   margin-top: 5px;
+}
+.schedule-table tr.other-no-border td{
+   background: #C4E9FF;
+   border-top: 0px;
+   margin-top: 5px;
+}
+.schedule-table tr.special-session td{
+   background: #C4FFC5;
+   border-top: 1px solid #FFF;
+   margin-top: 5px;
+}
+
+/*Posters Page Link*/
+#posters-link{
+   background: url('../../uploads/1370475960_External-Link.png') center right no-repeat;
+   padding-right:15px;
+}
+
+body.page-id-2075 #wrapper1 {
+	position: relative;
+	text-align: left;
+	width: 100%;
+ min-width: 1250px;

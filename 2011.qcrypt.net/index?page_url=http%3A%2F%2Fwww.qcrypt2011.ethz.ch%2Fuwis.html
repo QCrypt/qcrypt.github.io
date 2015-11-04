@@ -1,0 +1,604 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+    <!--
+        IMPORTANT: THESE TEMPLATES MAY ONLY BE USED WITH THE WRITTEN PERMISSION
+        OF VISUAL COMMUNICATIONS (CC),
+        HTTP://WWW.CD.ETHZ.CH
+    -->
+    
+    <title>
+       ETH - QCRYPT 2011: First Annual Conference on Quantum Cryptography
+    </title>
+    
+      
+    
+    
+    <!-- copyright, author, e-mail address -->
+    
+      <meta name="copyright" content="ETH Zuerich" />
+      <meta name="author" content="Michael Walter" />
+      <meta name="Description" content="ETH Zuerich" />
+      <meta name="Keywords" content="ETH Zuerich" />
+      <meta name="version"
+            content="Zope 2.8.12-final /Silva 1.5.13 /SilvaExtETHLayout 0.9.35" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <!-- supervision header -->
+    <meta name="Systemueberwachung" content="ETHZ" />
+    <!-- charset, home, base -->
+    <link href="http://www.ethz.ch/" rel="home" />
+    <link rel="SHORTCUT ICON"
+          href="icons_site/kuppel_icon_c010.ico" />
+    
+    <base href="" />
+    <!-- style sheet -->
+    
+        <link rel="stylesheet"
+              href="css/colors_c010.css"
+              type="text/css" />
+        <link rel="stylesheet"
+              href="css/ns4.css"
+              type="text/css" />
+        <style type="text/css">
+            <!--
+            @import url("css/modernbrowsers.css");
+            @import url("css/colors_c010.css");
+            @import url("css/silva.css");
+            @import url("css/customstyles.css");
+            -->
+            </style>
+        <link rel="stylesheet" media="print"
+              href="css/print.css"
+              type="text/css" />
+        <style type="text/css">
+               .logo-bg, .logo-bg-alt { background-image: url(images/head_bg_logo_home_c010.jpg); background-repeat: no-repeat; }
+               .identity-image { background-image: url(images/head_bg_home_c010.jpg); background-repeat: repeat; }
+               .mainnav, .screenhead, .color5-back, .color4-back, .color3-back, .color2-back, .color1-back,  .servicenav, .transparent {background-image: url(icons_site/transparent.gif); }</style>
+        
+          <style type="text/css">div.navblock, .margins div.contentblock-1col { margin-bottom:0px; }</style>
+        
+        
+        <!-- extra stylesheet for ie7 -->
+        <!--[if lte IE 6]>
+        <link rel='stylesheet' href='http://www.qcrypt2011.ethz.ch/css//ie6.css' type='text/css' />
+        <![endif]-->
+        <!--[if IE 7]>
+        <link rel='stylesheet' href='http://www.qcrypt2011.ethz.ch/css//ie7.css' type='text/css' />
+        <![endif]-->
+        
+    
+    <!-- keywords, description -->
+    
+    <!-- script slot -->
+    
+      
+      
+        <script src="scripts/scripts_en.js"
+                type="text/JavaScript"></script>
+      
+      
+      
+      <script src="scripts/jquery-1.6.4.min.js"
+              type="text/JavaScript"></script>
+      <script src="scripts/scripts.js"
+              type="text/JavaScript"></script>
+      
+      <script type="text/javascript" language="JavaScript">
+      <!--
+        // opens a windows to change the color scheme
+        function openCenteredWindow(url, height, width, name, parms) {
+          var left = Math.floor( (screen.width - width) / 2);
+          var top = Math.floor( (screen.height - height) / 2);
+          var winParms = "top=" + top + ",left=" + left + ",height=" + height + ",width=" + width;
+          if (parms) { winParms += "," + parms; }
+            var win = window.open(url, name, winParms);
+          if (parseInt(navigator.appVersion) >= 4) { win.window.focus(); }
+            return win;
+        }
+        function openColorWindow() {
+          newwin = openCenteredWindow("colors.html",520,120,"ColorScheme","resizable=yes")}
+      //-->
+      </script>
+    
+  </head>
+  <body bgcolor="#FFFFFF" onload="setup()"
+        class="bg_logo_home">
+  <div class="margins" id="bodymargins" style="width:auto;">
+    <a id="top" name="top"></a>
+    <!-- START header table -->
+    <div id="printhead">
+      
+        <img alt="printlogo"
+             src="icons_site/ethlogo-print.png"
+             width="220" height="57" />
+      
+      
+    </div>
+    <table id="screenhead" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+      <!-- ETH / UNI logo -->
+        
+            
+            
+              <td width="220" valign="top" class="logo-bg"><a href="http://www.ethz.ch/index_EN" title="ETH Zurich - Startpage"><img border="0" src="icons_site/transparent.gif" alt="http://www.ethz.ch/index_EN" width="220" height="105"/></a></td>
+            
+        
+        
+        <!-- START picture and navigation -->
+        <td width="100%" valign="top" class="identity-image">
+          <table width="100%" border="0" cellpadding="0"
+                 cellspacing="0">
+          <!-- head picture and language -->
+            <tr>
+              <td colspan="2" width="100%" height="54" valign="bottom">
+                
+                <div class="sitename" id="sitename"><a href="index.html"><img alt="First Annual Conference on Quantum Cryptography" title="First Annual Conference on Quantum Cryptography" src="images/head_sitename_c010.jpg" height="54" width="599" border="0" name="sitename" /></a></div>
+              </td>
+              <td class="transparent">&nbsp;</td>
+            </tr>
+            <!-- START navigation 1. row and service-navigation -->
+            <tr>
+              <td width="100%" height="17" valign="middle"
+                  class="">
+                
+              </td>
+              <td rowspan="3" width="220" height="100%" class="color1-back">
+                <!-- START service-navigation and search -->
+                <table width="220" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td height="18" valign="middle">
+                      
+                      
+                        <div class="servicenav">
+						  
+						  <a class="servicenav-off" href="sitemap/index.html">Sitemap</a>&nbsp;|
+						  
+                        </div>
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <!-- START search form -->
+                      
+      <form name="search" id="searchform" action="http://www.qcrypt2011.ethz.ch/cse_results/index_EN" method="GET" accept-charset="UTF-8">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="middle">
+                <input id="qs" class="searchfield" type="text" name="qs" value="Search" onblur="if(this.value=='')this.value='Search';" onfocus="if(this.value=='Search')this.value='';"/>
+                  <input type="hidden" name="ie" value="utf8" />
+                  <input type="hidden" name="oe" value="utf8" /><input type="hidden" name="q" value="site:www.qcrypt2011.ethz.ch" id="search_intranet" />
+              </td>
+              <td valign="middle" width="18" align="right" class="searchtd">
+                <input class="searchbutton" type="image" name="GO" src="icons_site/lens_c010.gif"/>
+              </td>
+            </tr>
+          </table>
+        </form><script type="text/javascript" charset="utf-8">
+(function($) {
+$(document).ready(function() {
+    $('#searchform').submit(function() {
+        if ($('#search_intranet').length > 0) {
+            var q_intranet = $('#search_intranet').val() + " " + $('#qs').val();
+            $('#search_intranet').val(q_intranet);
+        } else {
+            $('#qs').attr('name','q');
+        }
+        //return false;
+    });
+});
+})(jwcd.jQuery);
+</script>
+    
+                      <!-- END search form -->
+                    </td>
+                  </tr>
+                </table>
+                <!-- END service-navigation and search -->
+              </td>
+              <td width="50" height="100%" rowspan="3" class="transparent"><img
+    alt=""
+    src="icons_site/transparent.gif"
+    width="50" height="10" /></td>
+            </tr>
+            <!-- END navigation 1. row and service-navigation -->
+            <!-- START navigation 2. row -->
+            <tr>
+              <td width="100%" height="17" valign="middle"
+                  class="">
+                
+              </td>
+            </tr>
+            <!-- END navigation 2. row -->
+            <!-- START navigation 3. row -->
+            <tr>
+              <td width="100%" height="17" valign="middle"
+                  class="">
+                
+              </td>
+            </tr>
+            <!-- END navigation 3. row -->
+          </table>
+          <!-- END picture and navigation -->
+        </td>
+      </tr>
+    </table>
+    <!-- END header table -->
+    <!-- ############################################################################ -->
+
+    <!-- START content -->
+    <!-- START path -->
+    
+
+    
+    
+      
+        
+<!-- START content divs -->
+<!-- START path -->
+<div id="path-service">
+  <!-- START servicenav2 -->
+  
+    <div id="pageicons">
+      <div class="servicenav2" id="servicenav2">
+        <a href="javascript:printpage();" class="icon-print" onfocus="if(this.blur)this.blur();" onmouseover="changeText(1);" onmouseout="changeText(0);">
+           <img src="icons_site/icon_print.gif"
+                border="0" alt="print" />
+        </a><form method="post" class="icon-mail"
+                  action="http://www.qcrypt2011.ethz.ch/index/mail_this_page">
+          <input type="hidden" name="page_url" value="http%3A//www.qcrypt2011.ethz.ch/uwis" />
+          <input type="hidden" name="page_url"
+                 value="http://www.qcrypt2011.ethz.ch/index" />
+          <input type="hidden" name="language_current"
+                 value="EN" />
+          <input type="hidden" name="language_default"
+                 value="EN" />
+          <input type="image"
+                 src="icons_site/icon_email.gif"
+                 title="e-mail" alt="e-mail"
+                 onmouseover="changeText(2);"
+                 onmouseout="changeText(0);"
+                 style="border:none;padding:0" />
+        </form><form action="http://www.qcrypt2011.ethz.ch/index/pdf"
+                     method="post" class="icon-pdf">
+          <input type="hidden" name="page_url" value="http%3A//www.qcrypt2011.ethz.ch/uwis" />
+          <input type="image"
+                 src="icons_site/icon_pdf.gif"
+                 title="pdf" alt="pdf"
+                 onmouseover="changeText(3);"
+                 onmouseout="changeText(0);"
+                 style="border:none;padding:0" />
+        </form>
+        <span id="pageicons-text" style="visibility: visible;">&nbsp;&nbsp;</span>
+    </div>
+  </div>
+  <div class="pathline">
+    <a class="path" href="http://www.ethz.ch/">ETH Zurich</a>
+	<!--
+    <span metal:use-macro="python:path(helpers.get_content_path(here, 'siteroot_path'))">
+      Siteroot Path
+    </span>
+	-->
+    
+  - <a class="path" href="index.html">QCRYPT 2011</a>&nbsp;
+  
+
+
+  </div>
+  <div style="clear:both;"></div>
+  <!-- END servicenav2 -->
+  
+</div>
+<!-- END Path -->
+<!-- START content area -->
+<!-- no nav, textblock full, no 3rd col -->
+
+<!-- nav, textblock full, no 3rd col -->
+
+<!-- nav, textblock full, 3rd col -->
+
+  
+  
+
+<!-- START subnavigation 1. coloumn -->
+
+  <div class="navblock">
+    <div class="subnav">
+        
+  <div class="subnav-lev1"><a class="subnav-on" href="http://www.qcrypt2011.ethz.ch/index">QCRYPT 2011</a></div>
+  
+
+
+        
+  <div class="subnav-lev2"><a title="Committees" class="subnav-off"  href="committees.html">Committees</a></div>
+<div class="subnav-lev2"><a title="Scientific Programme" class="subnav-off"  href="programme.html">Scientific Programme</a></div>
+<div class="subnav-lev2"><a title="Submissions" class="subnav-off"  href="call_submission.html">Submissions</a></div>
+<div class="subnav-lev2"><a title="Registration" class="subnav-off"  href="registration.html">Registration</a></div>
+<div class="subnav-lev2"><a title="Conference Venue" class="subnav-off"  href="venue.html">Conference Venue</a></div>
+<div class="subnav-lev2"><a title="Accommodation" class="subnav-off"  href="accommodation.html">Accommodation</a></div>
+<div class="subnav-lev2"><a title="Photo Gallery" class="subnav-off"  href="gallery.html">Photo Gallery</a></div>
+<div class="subnav-lev2"><a title="Related Conferences" class="subnav-off"  href="related.html">Related Conferences</a></div>
+<div class="subnav-lev2"><a title="QCRYPT Charter" class="subnav-off"  href="charter.html">QCRYPT Charter</a></div>
+<div class="subnav-lev2"><a title="Newsletter" class="subnav-off"  href="newsletter.html">Newsletter</a></div>
+<div class="subnav-lev2"><a title="Contact" class="subnav-off"  href="Contact.html">Contact</a></div>
+
+  
+
+
+    </div>
+  </div>
+
+<div class="clearright"></div>
+<!-- END subnavigation 1. coloumn -->
+<!-- START content 2./3. coloumn -->
+<div class="contentblock-3col" style="width:auto;"
+     id="contentblock-3col">
+  <div id="languages">
+    
+  </div>
+  <!-- START main heading -->
+  
+  <h2>QCRYPT 2011: First Annual Conference on Quantum Cryptography</h2>
+  
+
+  <!-- END main heading -->
+  <!-- START text box floating right -->
+  <!-- show column depending on layout switch -->
+  
+    
+          
+            
+  
+                        	
+    
+    	
+	      <div class="box-border">
+	        <div class="box">
+	          <p class="boxtitle"></p>
+	          
+<div class="image-left"><a href="silva_ethz/ETH/phys/qcrypt2011/qcrypt2011/box_feeder/poster-qcrypt.pdf"><img src="box_feeder/poster-qcrypt-thumb.jpg%3Fhires" width="200" height="283" alt="poster-qcrypt-thumb"  /></a></div>
+<p class="p">» download <a href="box_feeder/poster-qcrypt.pdf">Poster</a> or <a href="box_feeder/flyer-qcrypt.pdf">Flyer</a><br />» download <a href="box_feeder/booklet.pdf">Booklet</a></p>
+
+
+                          
+
+
+	           
+	        </div>
+	      </div>
+    	
+    	
+	      <div class="box-border">
+	        <div class="box">
+	          <p class="boxtitle">Sponsors</p>
+	          
+<div class="image-left"><a target="_blank" href="http://www.paulicenter.ch/"><img src="box_feeder/pauliohne.jpg" width="200" height="81" alt="pauliohne"  /></a></div><p>&nbsp;</p>
+<div class="image-left"><a target="_blank" href="http://www.ethz.ch/index_EN"><img src="box_feeder/eth_logo_black.jpg%3Fhires" width="199" height="60" alt="eth_logo_black"  /></a></div><p>&nbsp;</p>
+<div class="image-left"><a target="_blank" href="http://www.nccr-qsit.ethz.ch/"><img src="box_feeder/Logo_QSIT.png%3Fhires" width="200" height="93" alt="Logo_QSIT"  /></a></div><p>&nbsp;</p>
+<div class="image-left"><a target="_blank" href="http://www.nano-tera.ch/"><img src="box_feeder/Logo_nano-tera.png%3Fhires" width="200" height="101" alt="Logo_nano-tera"  /></a></div><p>&nbsp;</p>
+<div class="image-left"><a target="_blank" href="http://www.quantumlah.org/"><img src="box_feeder/CQT_Logo.png%3Fhires" width="197" height="41" alt="CQT_Logo"  /></a></div><p>&nbsp;</p>
+<div class="image-left"><a target="_blank" href="http://www.iqc.ca/"><img src="box_feeder/Logo_IQC.png%3Fhires" width="200" height="69" alt="Logo_IQC"  /></a></div><p>&nbsp;</p>
+<div class="image-left"><a target="_blank" href="http://www.idquantique.com/"><img src="box_feeder/Logo_IDQ.png%3Fhires" width="200" height="81" alt="Logo_IDQ"  /></a></div><p>&nbsp;</p>
+<div class="image-left"><a target="_blank" href="http://www.snf.ch/E/Pages/default.aspx"><img src="box_feeder/SNFlogo.gif%3Fhires" width="199" height="34" alt="SNFlogo"  /></a></div><p>&nbsp;</p>
+<div class="image-left"><a target="_blank" href="http://www.dfg.de/en/index.jsp"><img src="box_feeder/dfg_logo_blau.jpg%3Fhires" width="199" height="47" alt="dfg_logo_blau"  /></a></div>
+
+	           
+	        </div>
+	      </div>
+    	
+    
+ 
+  
+
+          
+    
+  
+  <!--    END text box -->
+  <!-- START section main content -->
+      
+  
+
+<p class="p"><strong>September 12–16, 2011, Zurich, Switzerland</strong><br /></p>
+
+
+                          
+<p>&nbsp;</p>
+
+<p class="p"><strong>Quantum cryptography</strong> aims to achieve security from fundamental physical principles, such as the quantum mechanical phenomena of entanglement and Heisenberg's uncertainty principle. In the last few years significant progress has been made in the theoretical understanding of quantum cryptography and its technological feasibility has been demonstrated experimentally. Quantum cryptography is therefore regarded as one of the most promising candidates for a future quantum technology.</p>
+
+
+                          
+
+<p class="p">With <strong>QCRYPT</strong> we initiate a new conference series on Quantum Cryptography. The first conference in this series will be held at ETH Zurich and the second at CQT in Singapore. The aim of this series is to bring together researchers working on all aspects of the subject (both on the theoretical and experimental sides) and to support the building of a research community in Quantum Cryptography.</p>
+
+
+                          
+
+<h3 class="heading">Key Dates</h3>
+
+
+
+
+
+
+<p class="p">March 17, 2011 — Registration has opened<br />April 12, 2011 — Call for abstracts<br />June 1, 2011 — Deadline for submission of abstracts has passed<br />July 1, 2011 — Notice of acceptance<br />July 15, 2011 — Early bird registration has closed<br />August 1, 2011 — Deadline for submission of poster abstracts has passed<br />September 1, 2011 — Registration has closed</p>
+
+
+                          
+
+<h3 class="heading">Invited Speakers</h3>
+
+
+
+
+
+
+<p class="p">Artur Ekert<br />Nicolas Gisin<br />Philippe Grangier<br />Richard J. Hughes<br />Robert König<br />Vadim Makarov<br />Jonathan Oppenheim<br />Eugene Polzik<br />Masahide Sasaki<br />Andrew Shields<br />Dominique Unruh<br />Thomas Vidick</p>
+
+
+                          
+
+<h3 class="heading">Participants</h3>
+
+
+
+
+
+
+<p class="p"><a href="participants.pdf">Here</a> is a list of all participants of QCRYPT 2011.</p>
+
+
+                          
+
+<h3 class="heading">Next QCRYPT</h3>
+
+
+
+
+
+
+<p class="p"><a href="http://www.qcrypt.net/"><strong>QCRYPT 2012</strong></a> will be held at CQT in Singapore from September 10–14, 2012.</p>
+
+
+                          
+
+<h3 class="heading">Partner Conference</h3>
+
+
+
+
+
+
+<p class="p"><a href="http://www.qipc2011.ch/">International Conference on Quantum Information Processing and Communication (QIPC 2011)</a><br />ETH Zurich, Switzerland<br />September 5-9, 2011</p>
+
+
+                          
+<p>&nbsp;</p>
+
+<span>                  
+  <div style="WIDTH:100%">
+    <iframe frameborder="no" scrolling="auto"
+            src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FQCrypt-Conference-on-Quantum-Cryptography%2F166412400066974&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80"
+            height="80px" width="450px">
+     Browsers supported: Netscape 7.* and higher, IE 5.x and higher, Mozilla 1.x and higher
+    </iframe>
+  </div>
+</span>
+
+           
+  
+
+  <!-- END section main content -->
+</div>
+
+
+
+
+      
+    
+    <!-- END content -->
+    <!-- START footer -->
+    <!-- ############################################################################ --><!-- START footer -->
+    <div class="clearboth">
+      &#160;
+    </div>
+    <!-- note for netscape 4.x users -->
+    <p id="ns4note" class="note">
+      <strong><font size="+1">Wichtiger Hinweis:</font><br />
+        Diese Website wird in &#228;lteren Versionen von Netscape ohne
+        graphische Elemente dargestellt. Die Funktionalit&#228;t der
+        Website ist aber trotzdem gew&#228;hrleistet. Wenn Sie diese
+        Website regelm&#228;ssig benutzen, empfehlen wir Ihnen, auf
+        Ihrem Computer einen aktuellen Browser zu installieren. Weitere
+        Informationen finden Sie auf<br />
+        <a href="http://www.cd.ethz.ch/services/web/">folgender
+        Seite</a>.<br />
+        <br />
+        <font size="+1">Important Note:</font><br />
+        The content in this site is accessible to any browser or
+        Internet device, however, some graphics will display correctly
+        only in the newer versions of Netscape. To get the most out of
+        our site we suggest you upgrade to a newer browser.<br />
+        <a href="http://www.cd.ethz.ch/services/web/">More
+        information</a></strong>
+    </p>
+
+    <!-- START footer -->
+    <div class="footerblock">
+        <div class="unitlogo">
+          <!-- secondary logo -->
+          
+          <!-- primary logo -->
+          
+        </div>
+        <div class="footerline">
+          <div class="footertext">
+            
+            
+              
+        &copy; 2015 <a  class="path" href="http://www.ethz.ch/index_EN">ETH Zurich</a> |
+    
+              <a class="path"
+                 href="http://www.qcrypt2011.ethz.ch/imprint/index">Imprint</a> | 
+              <a class="path" href="disclaimer/index_EN.html">Disclaimer</a> | 
+            
+            <!--
+			<span tal:omit-tag=""
+				  tal:define="ms python:metadata_context.service_metadata;
+				              contact_name python:ms.getMetadataValue(metadata_context, 'silva-extra', 'contactname');
+				              contact_mail python:ms.getMetadataValue(metadata_context, 'silva-extra', 'contactemail')"
+				  tal:condition="contact_name">
+			  <span tal:omit-tag=""
+				    tal:define='css_class string:class="path"'
+				    tal:replace="structure python:ETHhelpers.scramble_mail(contact_mail, contact_name, css_class)">contact_name</span>
+ 			  <span> | </span>
+			</span>
+			-->
+			
+        26 October 2012
+    
+          </div>
+          
+  
+  
+    <div class="footerwologo">
+      <img alt="powered by" border="0"
+           src="icons_site/footer_zs_powered.gif" /><a href="http://www.zope.org/" target="_blank"><img
+    alt="zope" border="0"
+    src="icons_site/footer_zs_zope.gif" /></a><img
+    alt="and" border="0"
+    src="icons_site/footer_zs_and.gif" /><a href="http://www.infrae.com/" target="_blank"><img
+    alt="silva" border="0"
+    src="icons_site/footer_zs_silva.gif" /></a><a
+    href="http://www.hk.ethz.ch/index_EN"><img
+    alt="Corporate Communications" border="0"
+    src="icons_site/footer_eth_cc_EN.gif" /></a>
+    </div>
+  
+
+    </div>
+  </div><!-- END footer -->
+    <!-- START page top icon -->
+    <div id="pagetop">
+      
+         <span>
+           <a href="index%3Fpage_url=http%253A%252F%252Fwww.qcrypt2011.ethz.ch%252Fuwis.html#top"><img
+    border="0"
+    src="icons_site/top_c010.gif"
+    alt="top" title="top" /></a>
+         </span>
+         
+      
+    </div>
+    <!-- END page top icon -->
+
+    
+
+
+    
+  </div></body>
+</html>

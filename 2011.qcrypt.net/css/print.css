@@ -1,0 +1,171 @@
+/**********************************/
+/* CSS ETH WCMS-Templates         */
+/* copyright 2004 ETH Web Office  */
+/* Author:Y. Serrano              */
+/* Author:P. Ruetsche             */
+/**********************************/
+/*
+$Id: print.css 7025 2011-09-21 10:25:45Z yserrano $
+$Rev: 7025 $
+$Release: 1.1.1 $
+*/
+
+
+/* -------------- HEADER -------------- */
+/* sitename */
+
+/* footer */
+
+html, body {
+    height: auto;
+}
+
+.margins {
+    position: relative;
+    min-height: auto;
+    height: auto;
+}
+
+html>body .margins {
+    height: auto;  
+} 
+    
+div.footerblock {
+    position:relative;
+}
+
+
+/* language */
+div.language, div#languages, #screenhead, div.navblock, div.servicenav2, div.pagetop, div#pagetop, #pageicons, div#head a img, div#servicenav, div#topnav, #leftnav, div#statusnav {
+	display:none;
+}
+
+#printhead {
+	padding-top:20px;
+	margin-left:10px;
+	margin-bottom:6px;
+	display:block;
+}
+
+.citiation {
+    margin-top:10px;
+    margin-left:10px;
+    padding:0px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-right:240px;
+    border-top:2px solid grey;
+    border-bottom:2px solid grey;
+}
+
+div.pathline {
+	padding-left:10px;
+}
+
+/* -------------- COMMUN MARGINS / WIDTHS -------------- */
+
+div.servicenav2, div.box-border, div.navblock, .float-right, .float-left { 
+	width:220px; 
+}
+
+.float-left, .float-right, .image-right, .image-left, .image-center, .box-border {
+	margin-bottom:20px;
+}
+
+
+.pathline, div.contentblock-1col, div.contentblock-2col, div.contentblock-3col, div.footerblock { 
+	margin-right:10px; 
+}
+
+
+
+div.footerline { 
+    margin-top:10px;
+	margin-left:0px; 
+	padding-left:10px;
+	padding-right:10px;
+	margin-right:0px;
+	
+}
+
+div.contentblock-1col,div.contentblock-2col,div.contentblock-3col { margin-bottom:120px;}
+
+
+/* -------------- different columntypes -------------- */
+
+div.contentblock-2col, div.contentblock-3col { 
+	margin-left:10px; 
+}
+
+/* 1 column */
+
+div.contentblock-1col { margin-left:10px; }
+
+/* 2 column */
+
+/* 3 column  */
+div.contentblock-3col .float-left {
+	text-align:left;
+	float: none;
+}
+
+/* -------------- COLORS -------------------- */
+/* set black colors                          */
+
+h2, h3, h4, h5, h6, h7, 
+.boxtitle, .box h3, .box h4, .box h5, .box h6, .box h7, 
+div.pathline, a.path, a.path:link, a.path:visited, a.path:hover, 
+a, a:link, a:visited, a:hover, a:active , a:focus 
+{
+	color:#000000; 
+}
+
+div.box-border { 
+	border: 1px solid #000000; 
+}
+ 
+/* -------------- FONTS -------------------- */
+a.path, a.path:link, a.path:visited, a.path:hover { 
+    font-size:0.9em;
+}
+
+div.pathline {
+    font-size:0.7em;
+    border-bottom:none;
+    margin-right:0px;
+    padding-right:10px;
+}
+
+div#path-service {
+    margin-right:0px;
+}
+
+body {
+    font:0.7em verdana, arial, helvetica, sans-serif;
+}
+
+h2 { 
+    font-size:1.2em;
+}
+h3 { 
+    font-size:1em; 
+}
+.no-padtop { padding-top:0px;}
+h4 { font-size:0.9em; padding-top:5px;}
+h5 { font-size:0.9em; padding-top:0px;}
+h6, h7 { 
+    font-size:0.8em;
+}
+
+input, select, option {
+    font-size:0.8em;
+}
+
+div#head div#sitename {
+    margin-left:250px;
+}
+
+/* ie win fixes */
+div.contentblock-3col div.tablemargin {
+    margin-right:241px;
+}

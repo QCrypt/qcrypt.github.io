@@ -1,0 +1,125 @@
+/**********************************/
+/* CSS ETH WCMS-Templates         */
+/* copyright 2004 ETH Web Office  */
+/* Author: Y. Serrano             */
+/**********************************/
+/*
+$Id: ns4.css 4006 2007-10-22 11:37:01Z yserrano $ 
+$Rev: 4006 $
+$Release: 1.1.3 $
+*/
+
+/* ---- minimal css styles for netscape 4.x----*/
+
+body {
+    margin: -10px 0px 0px -10px;
+    font: 12pt verdana, arial, helvetica, sans-serif;
+}
+
+div.box-border {
+    border:none;
+}
+
+li, ul, ol {
+    color: #000000;
+}
+
+.note, .pathline, .navblock, .contentblock-3col, .contentblock-2col, .contentblock-1col, .footerblock, .pagetop {
+    margin-left:15px;
+}
+
+.navblock {
+    margin-bottom:20px;
+}
+
+.identity-image, .logo-bg {
+    z-index:1;
+}
+
+
+#printhead, .icon-langsep, .servicenav2 {
+    display:none;
+}
+
+#ethlogo-ns4 {
+    display:none;
+    margin-top:15px;
+}
+
+.pathline {
+    margin-bottom:10px;
+}
+
+.servicenav2 {
+    margin-top:30px;
+}
+
+
+/* -----overrides for netscape 4.x----*/
+/* headings */ 
+
+.note { 
+    margin-top:20px;
+    margin-bottom:30px;
+    color: #bb0000;
+    margin-right:200px;
+}
+
+.ns4-note {
+    margin-right:100px;
+}
+
+.citiation {
+    padding: 10px;
+}
+
+a.mainnav-off, a.mainnav-off:link, a.mainnav-off:visited, a.mainnav-off:hover { 
+    text-decoration:none; 
+    font: 10pt verdana, arial, helvetica, sans-serif;
+}
+a.mainnav-on, a.mainnav-on:link, a.mainnav-on:visited, a.mainnav-on:hover { 
+    text-decoration:none; 
+    font: 10pt verdana, arial, helvetica, sans-serif;
+}
+
+a.path, div.footertext, #pageicons-text, .servicenav, .servicenav-off, .servicenav-on { 
+    font: 9pt verdana, arial, helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+    /* clear:right; */
+}
+
+/* fonts  */
+
+/* change margins widths to look good on ns4*/
+
+div.nav-block { width:220px; }
+h1, h2, h3, h4, h5, h6 { margin-right: 0px; }
+
+h1 { font: bold 14pt verdana, arial, helvetica, sans-serif; }
+h2 { font: bold 14pt verdana, arial, helvetica, sans-serif; }
+h3 { font: bold 13pt verdana, arial, helvetica, sans-serif; }
+h3.related-topics { font: 12pt verdana, arial, helvetica, sans-serif; }
+h4 { font: bold 12pt verdana, arial, helvetica, sans-serif; }
+h5 { font: 12pt verdana, arial, helvetica, sans-serif; }
+
+.searchbutton { border: 0px; }
+
+/* does not validate */
+
+input[type="image"] {
+	color: transparent ! important;
+	background: transparent ! important;
+	border: none;
+}
+
+input.image {
+	color: transparent ! important;
+	background: transparent ! important;
+	border: none;
+}
+

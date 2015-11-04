@@ -1,0 +1,1130 @@
+/**********************************/
+/* CSS ETH WCMS-Templates         */
+/* copyright 2004 ETH Web Office  */
+/* Author:Y. Serrano              */
+/* Author:P. Ruetsche             */
+/**********************************/
+/*
+$Id: modernbrowsers.css 7078 2011-11-03 14:50:58Z yserrano $
+$Rev: 7078 $
+$Release: 1.1.9 $
+*/
+
+/* -------------- HEADER -------------- */
+
+/*  ns4 divs */
+#printhead, #ns4note {
+    display:none;
+}
+
+.note, .pathline, .navblock, .contentblock-3col, .contentblock-2col, .contentblock-1col, .contentblock-1Bcol, .footerblock, .pagetop {
+  margin-left:0px;
+}
+
+/* turn on modernbrowsers divs */
+#sitename, #ethlogo, .icon-langsep, .servicenav2  {
+    display:block;
+}
+
+div.sitename {
+    position:absolute;
+    top:0px;
+    left:220px;
+    margin:0px;
+    padding:0px;
+    z-index:0;
+}
+body.bg_logo_home_eu div.sitename { left:395px;}
+.logo-bg-alt { background-position: -220px 0; overflow:hidden;height:99px;}
+body.bg_logo_home_eu .logo-bg a { display:block;height:150px;overflow:hidden;}
+
+a.languagelink, a.languagelink:link, a.languagelink:visited, a.languagelink:hover { text-decoration:none; }
+#languages { 
+    width:220px;
+    float:right;
+    padding-top:3px;
+    text-align:right;
+    font-size:86%;
+}
+
+.text-lang { margin-left:0.4em;}
+
+/* search field */
+
+#searchlabel {
+    font-size:87%;
+}
+
+
+body input.searchfield {
+    font-size:9pt;
+    text-align:left;
+    margin:4px 0 1px 7px;
+    padding-top:1px;
+    border-style:none;
+    border-right:none;
+    border:0 transparent solid;
+    width:130px;
+    vertical-align:middle;
+}
+
+.searchtd > .searchbutton {
+    margin-bottom:1px;
+}
+
+/* icons */
+     .icon-print {
+        width:20px;
+    }
+    .icon-mail {
+        width:22px;
+    }
+    .icon-pdf {
+        width:18px;
+    }
+
+    .icon-print, .icon-mail, .icon-pdf {
+        float:left;
+    }
+    
+   .icon-lang {
+        width:18px;
+        float:right;
+    }
+    
+   .icon-langsep {
+        width:1px;
+        float:right;
+    }
+
+/* -------------- NAVIGATION -------------- */
+/* path */
+.pathline {
+    line-height:100%;
+    padding-top:3px;
+    padding-bottom:1px;
+    padding-left:14px;
+    text-decoration:none;
+    margin-bottom:0px;
+    margin-right:250px;
+}
+
+
+/* same fontsize for footertext, servicenav2, servicenav etc*/
+a.servicenav-off, a.servicenav-on { 
+    font-size:90%;
+}
+
+div.footertext { 
+    font-size:86%;
+}
+
+#pageicons-text { 
+    /* font-size:11px; */
+    font-size:86%;
+}
+
+
+.servicenav {
+    font-size:96%;
+}
+
+a.path, a.path:link, a.path:visited, a.path:hover { 
+    font-size:100%;
+    text-decoration:none; 
+}
+
+.pathline {
+    font-size:86%;
+    text-decoration:none; 
+}
+
+/* service-navigation */
+.servicenav {
+    line-height:100%;
+    padding:0px;
+    padding-left:6px;
+    padding-right:5px;
+    margin:0px;
+}
+
+.servicenav2 {
+    top:0px;
+    margin:0px;
+    padding:0px;
+}
+
+/* float navblock to left*/
+div.navblock { 
+    float:left; 
+    z-index:0;
+    position:relative;
+}
+
+a.servicenav-off, a.servicenav-off:link, a.servicenav-off:visited, a.servicenav-off:hover { text-decoration:none; }
+a.servicenav-on, a.servicenav-on:link, a.servicenav-on:visited, a.servicenav-on:hover { text-decoration:none; }
+
+/* main-navigation */
+.mainnav {
+    font-size:110%;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:5px;
+    padding-right:5px;
+    margin-bottom:0px;
+    line-height:90%;
+}
+
+a.mainnav-off, a.mainnav-off:link, a.mainnav-off:visited, a.mainnav-off:hover { 
+    text-decoration:none; 
+    font-size: 90%;
+}
+
+a.mainnav-on, a.mainnav-on:link, a.mainnav-on:visited, a.mainnav-on:hover { 
+    text-decoration:none; 
+    font-size: 90%;
+}
+
+
+
+
+/* sub-navigation */
+.subnav {
+    /* position:relative; */
+    padding-top:57px;
+    padding-bottom:0px;
+    padding-left:14px;
+    padding-right:20px;
+}
+
+.subnav-lev1, .subnav-lev2, .subnav-lev3, .subnav-lev4, .subnav-lev5, .subnav-lev6, subnav-lev7 {
+    margin-bottom:3px;
+    text-decoration:none;
+    line-height:100%;
+}
+.subnav-lev1 {
+    padding-left:0px;
+    padding-top:0px;
+    font-weight:bold;
+    margin-bottom:0px;
+}
+
+.subnav-lev2 {
+    padding-left:0px;
+    padding-top:4px;
+}
+
+.subnav-lev3, .subnav-lev4, .subnav-lev5, .subnav-lev6, .subnav-lev7 {
+    font-size:95%;
+}
+
+.subnav-lev3 {
+    padding-left:11px;
+}
+.subnav-lev4 {
+    padding-left:20px;
+}
+.subnav-lev5 {
+    padding-left:28px;
+}
+.subnav-lev6 {
+    padding-left:35px;
+}
+.subnav-lev7 {
+    padding-left:41px;
+}
+
+a.subnav-off, a.subnav-off:link, a.subnav-off:visited { text-decoration:none; }
+a.subnav-off:hover, a.subnav-off:active, a.subnav-off:focus { text-decoration:underline; }
+
+a.subnav-on, a.subnav-on:link, a.subnav-on:visited, .gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl { text-decoration:none; }
+a.subnav-on:hover, a.subnav-on:active, a.subnav-on:focus { text-decoration:underline; }
+
+/* table of content (toc) */
+.toc { padding-top:0px; padding-bottom:10px; padding-left:0px; padding-right:0px; }
+
+a.toc-horizontal0, a.toc-horizontal0:link, a.toc-horizontal0:visited { text-decoration:none; }
+a.toc-horizontal0:hover, a.toc-horizontal0:active, a.toc-horizontal0:focus { text-decoration:underline; }
+
+a.toc-lev0, a.toc-lev0:link, a.toc-lev0:visited { text-decoration:none; }
+
+a.toc-lev0:hover, a.toc-lev0:active, a.toc-lev0:focus { text-decoration:underline; }
+
+
+a.toc-lev1, a.toc-lev1:link, a.toc-lev1:visited { text-decoration:none; }
+a.toc-lev1:hover, a.toc-lev1:active, a.toc-lev1:focus { text-decoration:underline; }
+
+a.toc-lev2, a.toc-lev2:link, a.toc-lev2:visited { text-decoration:none; }
+a.toc-lev2:hover, a.toc-lev2:active, a.toc-lev2:focus  { text-decoration:underline; }
+
+a.toc-lev3, a.toc-lev3:link, a.toc-lev3:visited { text-decoration:none; }
+a.toc-lev3:hover, a.toc-lev3:active, a.toc-lev3:focus { text-decoration:underline; }
+
+a.toc-lev4, a.toc-lev4:link, a.toc-lev4:visited { text-decoration:none; }
+a.toc-lev4:hover, a.toc-lev4:active, a.toc-lev4:focus { text-decoration:underline; }
+
+a.toc-lev5, a.toc-lev5:link, a.toc-lev5:visited { text-decoration:none; }
+a.toc-lev5:hover, a.toc-lev5:active, a.toc-lev5:focus { text-decoration:underline; }
+
+a.toc-lev6, a.toc-lev6:link, a.toc-lev6:visited { text-decoration:none; }
+a.toc-lev6:hover, a.toc-lev6:active, a.toc-lev6:focus { text-decoration:underline; }
+
+a.toc-lev7, a.toc-lev7:link, a.toc-lev7:visited { text-decoration:none; }
+a.toc-lev7:hover, a.toc-lev7:active, a.toc-lev7:focus { text-decoration:underline; }
+
+a.toc-lev8, a.toc-lev8:link, a.toc-lev8:visited { text-decoration:none; }
+a.toc-lev8:hover, a.toc-lev8:active, a.toc-lev8:focus { text-decoration:underline; }
+
+a.toc-lev9, a.toc-lev9:link, a.toc-lev9:visited { text-decoration:none; }
+a.toc-lev9:hover, a.toc-lev9:active, a.toc-lev9:focus { text-decoration:underline; }
+
+.toc-lev0 {
+    padding-left:0px;
+    }
+.toc-lev1 {
+    padding-left:11px;
+}
+
+.toc-lev2 {
+    padding-left:22px;
+}
+.toc-lev3 {
+    padding-left:33px;
+}
+.toc-lev4 {
+    padding-left:44px;
+}
+.toc-lev5 {
+    padding-left:55px;
+}
+.toc-lev6 {
+    padding-left:66px;
+}
+.toc-lev7 {
+    padding-left:77px;
+}
+.toc-lev8 {
+    padding-left:88px;
+}
+.toc-lev9 {
+    padding-left:55px;
+}
+
+/* -------------- CONTENT -------------- */
+
+/* pageicons */
+#pageicons {
+    float:right;
+    width:220px;
+    padding-top:3px;
+    
+}
+
+#pageicons-text {
+    float:left;
+    padding-left:10px;
+    width:80px;
+    height:15px;
+    overflow:hidden;
+}
+
+/* clear floats, resets vertical align*/
+div.clearfloat {
+    clear:right;
+    padding-right:20px;
+}
+
+div.clearboth {
+    clear:both;
+}
+
+div.clearright {
+    clear:right;
+}
+
+/* body */
+body {
+    font:80% verdana, arial, helvetica, sans-serif;
+    background-color:#FFFFFF;
+    color:#000000;
+    margin:0px;
+    padding:0px;
+    /* z-index:0; */
+}
+
+/* ---- headings ---- */
+/* h1 is reserved for special purposes */
+h2, h3, h4, h5, h6, h7 {
+    font-weight:bold;
+    padding-bottom:2px;
+    margin:0px;
+    clear:none;
+    margin-top:1.5em;
+    margin-bottom:0px;
+}
+h2 { 
+    font-size:130%;
+    padding-top:24px;
+    padding-bottom:10px;
+    clear:right;
+    margin-bottom:0px;
+    margin-top:0px;
+}
+h3 { 
+    font-size:110%; 
+    padding-top:20px; 
+    padding-bottom:5px;
+}
+.no-padtop { padding-top:0px;}
+h4 { font-size:100%; padding-top:5px;}
+h5 { font-size:100%; padding-top:0px;}
+h6, h7 { 
+    padding-top:0px;
+    font-weight:normal;
+    font-size:100%;
+}
+
+h7 {
+    font-style:italic;
+}
+
+
+.note {
+    font-weight: 900;
+    font-size:medium;
+}
+
+/* no space for h3 after clearhead 
+div.clearhead + h3 { padding-top:0px; }*/
+
+/* remove title extra space if a title follows a title*/
+
+/* links in general */
+a, a:link, a:visited, a:hover, a:active, a:focus { text-decoration:underline; }
+
+/* links 3. coloumn */
+a.col3, a.col3:link, a.col3:visited { text-decoration:none; }
+a.col3:hover, a.col3:active, a.col3:focus { text-decoration:underline; }
+
+/* ---- text ---- */
+/* paragraph */
+.lead { 
+    font-weight:bold;
+    line-height:110%;
+    margin:0px;
+    margin-bottom:6px;
+    padding:0px;
+}
+
+p { 
+    line-height:130%;
+    margin:0px;
+    margin-bottom:6px;
+    margin-right:0px;
+    /* fix text seleciton bug
+    position: relative; */
+}
+
+.lineheight1 { line-height:100%; }
+
+/* picture caption */
+.picture-caption { 
+    padding-top:6px; 
+    font-style:italic;     
+}
+
+/* ---- lists ---- */
+/* lists */
+p.list-caption { font-weight:bold; }
+
+ul, ol, dl, menu, dir { 
+    margin:0px; 
+    margin-left:25px; 
+    margin-bottom:20px;
+    padding:0px; 
+    
+}
+
+p.nobullet {
+    line-height:100%;
+}
+
+dt {
+    margin-top:10px;
+}
+
+ul {
+  list-style-type : square;
+}
+
+/* for big ordered lists*/
+ol {
+    margin-left:40px;
+}
+
+/* definition lists */ 
+
+dl {
+    margin-left:0px;
+}
+dd {
+    margin-left:20px;
+}
+
+
+/* ---- tables ---- */
+caption {
+    font-weight:bold;
+    line-height:120%;
+}
+tr { vertical-align:top; }
+th {
+    text-align:left;
+    font-weight:bold;
+}
+.tablehead {
+    text-align:left;
+    font-weight:bold;
+}
+
+.silvatable {
+    margin-bottom:20px;
+}
+
+/* ie bug */
+table {
+    font-size:100%;
+}
+
+
+/* ---- forms --- */
+/* forms:some doubled definitions because of problems with Netscape 4.7 */    
+form {
+    margin:0px;
+    padding:0px;
+    border:0px;
+}
+fieldset {
+    margin:0px;
+    padding-top:3px;
+    padding-bottom:0px;
+    padding-left:0px;
+    padding-right:0px;
+    border:0px;
+}
+
+/* input fields */
+input {
+    padding-top:2px; padding-bottom:2px;
+    margin-right:5px;
+}
+
+input[type="submit"], input[type="image"], input[type="reset"], input[type="button"] {
+
+	padding-left:14px;
+	padding-right:14px;
+	padding-top:2px;
+	padding-bottom:2px;
+
+	cursor: pointer;
+	cursor: hand; /* not valid, but necessary for ie 5 */
+}
+
+/* smaller buttons in boxes */
+div.box input.submit {
+    padding:2px 0px;
+	padding-left:0px;
+	padding-right:0px;
+} 
+
+div.box input[type="submit"] {
+	padding-left:7px;
+	padding-right:7px;
+}
+
+
+input.checkbox, input.image  {
+    padding:0px;
+}    /* negative values don't validate ! */
+
+input[type="checkbox"], input[type="image"] {
+    padding:0px;
+}
+
+/* ---- sitemap ---- */
+/* sitemap */
+p.sitemap { line-height:110%; }
+a.sitemap-link, a.sitemap-author { text-decoration:none; }
+a.sitemap-link:hover, a.sitemap-author:hover { text-decoration:underline; }
+
+
+
+/* -------------- FOOTER -------------- */
+
+/* new footer always on bottom */
+
+html, body {
+    height: 100%;
+}
+
+.margins {
+    position: relative;
+    _position:static;
+    min-height: 100%;
+    height: 100%;
+    _height:auto;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    /* height: auto; fix for citation bug */ 
+}
+
+html>body .margins {
+    height: auto;  
+} 
+
+div.unitlogo {
+    padding-left:13px;
+    padding-right:7px;
+    padding-bottom:5px;
+    padding-top:0px;
+    float:none;
+    width:200px;
+}
+    
+div.footerblock {
+    padding:0px;
+    position:absolute;
+    _position:static;
+    bottom:0px;
+    width:100%;
+    z-index:5;
+    
+}
+
+div.footerline {
+    float:none;
+    margin-top:0px;
+    padding-top:0px;
+    border-top:1px solid #CCCCCC;
+    height:30px;
+    margin-right:50px;
+    background-color:#FFFFFF;
+        z-index:20;
+
+}    
+    
+div.footertext, div.footerwologo {
+    margin:0px;
+    margin-bottom:0px;
+    padding-top:3px;
+    float:left;
+}
+    
+div.footerwologo {
+    text-align:right;
+    float:none;
+    margin-top:4px;
+}
+
+/* page-top */
+div#pagetop { 
+    position: absolute; right: 0px; bottom: 0px; z-index:200; 
+    padding-right:14px;padding-bottom:18px;
+    _padding-bottom:8px;
+}
+div > div#pagetop { 
+    position: fixed; 
+}
+
+/* -------------- COMMUN MARGINS / WIDTHS -------------- */
+
+div.box-border, div.navblock { 
+    width:220px;
+}
+
+#pageicons { width:220px;}
+
+.float-left, .float-right, .image-right, .image-left, .image-center {
+    margin-top:2px;
+    margin-bottom:20px;
+}
+
+.box-border {
+    margin-top:2px;
+    margin-bottom:25px;
+}
+
+
+.float-left, .float-right, .box-border {
+    margin-top:2px;
+}
+
+.float-left {
+    padding-right:20px;
+    clear:right;
+}
+
+div#path-service, div.contentblock-1col, div.contentblock-1Bcol, div.contentblock-2col, div.contentblock-3col { 
+    margin-right:50px; 
+}
+
+.pathline { 
+    margin-right:220px; 
+}
+
+
+div.footerline { 
+    margin-left:220px; 
+}
+
+/* -------------- SILVA IMAGE CLASSES / BOX -------------- */
+
+/* silva images*/
+.image-left {
+    text-align:left;
+}
+
+.image-center {
+    text-align:center;
+}
+
+.image-right {
+    text-align:right;
+}
+
+.float-left { 
+    float:left;
+    margin-right:10px;
+} 
+
+.float-right, .box-border {
+    float:right;
+    clear:right;
+    margin-left:20px;
+    position:relative;
+    _position:static;
+}
+
+
+
+/* because of different border in ie moz*/ 
+div.box-border {
+    width:218px;
+    position:relative;
+    _position:static;
+}
+
+div.box {
+    text-align:left;
+    margin-top:5px;
+    padding-bottom:5px;
+    margin-left:10px;
+    margin-right:10px;
+    /* overflow:hidden; */
+}
+
+
+/* -------------- different columntypes -------------- */
+
+/* commun 1 + 2 + 3 */
+
+div.contentblock-1col, div.contentblock-1Bcol, div.contentblock-2col, div.contentblock-3col  {
+    z-index:10;
+    position:relative;
+    _position:static;
+    padding-bottom:0px;
+    margin-bottom:50px;
+    word-wrap: break-word;
+}
+
+/* commun 1 + 2 */
+
+
+div.contentblock-1col table, div.contentblock-2col table {
+    clear:right;
+} 
+
+div.contentblock-1col h3, div.contentblock-1col h4, div.contentblock-1col h5,
+div.contentblock-1col h6, div.contentblock-1col h7,
+div.contentblock-2col h3, div.contentblock-2col h4, div.contentblock-2col h5,
+div.contentblock-2col h6, div.contentblock-2col h7 {
+    margin-right:20px; 
+}
+
+div.contentblock-1col .float-right, 
+div.contentblock-2col .float-right {
+    margin-left:20px;
+    width:220px;
+}
+
+/* div.contentblock-1col .float-right, div.contentblock-2col .float-right {
+    width:auto;
+    text-align: right;
+} */
+
+div.contentblock-2col, div.contentblock-3col { 
+    margin-left:220px; 
+}
+
+/* 1 column */
+
+div.contentblock-1col, div.contentblock-1Bcol { margin-left:15px; }
+
+
+/* 2 column */
+
+/* 3 column  */
+/*div.contentblock-3col .float-left {
+    text-align:left;
+    float: none;
+} */
+
+div.contentblock-3col p, div.contentblock-3col ul, div.contentblock-3col ol, div.contentblock-3col dl, 
+div.contentblock-3col dl, div.contentblock-3col h3, div.contentblock-3col h4, div.contentblock-3col h5, 
+div.contentblock-3col h6, div.contentblock-3col h7, div.contentblock-3col .citation, div.contentblock-3col blockquote,
+div.contentblock-3col div.image-left, div.contentblock-3col div.image-center, div.contentblock-3col div.image-right,
+
+div.contentblock-1Bcol p, div.contentblock-1Bcol ul, div.contentblock-1Bcol ol, div.contentblock-1Bcol dl, 
+div.contentblock-1Bcol dl, div.contentblock-1Bcol h3, div.contentblock-1Bcol h4, div.contentblock-1Bcol h5, 
+div.contentblock-1Bcol h6, div.contentblock-1Bcol h7, div.contentblock-1Bcol .citation, div.contentblock-1Bcol blockquote,
+div.contentblock-1Bcol div.image-left, div.contentblock-1Bcol div.image-center, div.contentblock-1Bcol div.image-right {
+    margin-right:240px;
+    padding-right:0px;
+}
+
+
+div.contentblock-3col .float-right, div.contentblock-1Bcol .float-right  {
+    width:220px;
+}
+
+/* div.contentblock-3col div.picture-caption {
+    margin-right:240px;
+} */
+
+div.contentblock-3col div.image-right, div.contentblock-1Bcol div.image-right {
+    margin-right:240px;
+    text-align:right;
+}
+
+div.contentblock-3col div.image-right div.picture-caption, div.contentblock-1Bcol div.image-right div.picture-caption {
+    margin-right:0px;
+    text-align:right;
+    width:98%;
+}
+
+div.contentblock-3col div.image-center, div.contentblock-1Bcol div.image-center {
+    margin-right:240px;
+    text-align:center;     
+}
+
+div.contentblock-3col div.image-center div.picture-caption, div.contentblock-1Bcol div.image-center div.picture-caption {
+    margin-right:0px;
+    text-align:center;
+    width:98%;
+}
+
+div.contentblock-3col .tablemargin, div.contentblock-1Bcol .tablemargin {
+    padding:0px;
+    margin-right:240px;
+}
+
+.contentblock-3col .tablemargin table { width:99%; }
+.contentblock-2col .tablemargin table { width:99%; }
+.contentblock-1col .tablemargin table { width:99%; }
+.contentblock-1Bcol .tablemargin table { width:99%; }
+
+/* ie win fix for forms */ 
+.margins form .tablemargin table { width:98%; }
+
+/* because of ie bug set it back for others */
+div.margins > .tablemargin, div.contentblock-1col > .tablemargin, .contentblock-2col > .tablemargin, div.contentblock-3col > .tablemargin, div.contentblock-1Bcol > .tablemargin {
+    width:auto;
+}
+
+.tablemargin table {
+    _table-layout:fixed;
+    overflow:visible;
+}
+
+.tablemargin > table {
+    width:auto;
+}
+
+/* remove margins for ul hX in tables */
+div.tablemargin ul, div.tablemargin h3, div.tablemargin h4, div.tablemargin h5, div.tablemargin h6, div.tablemargin h7  {
+    margin-right:0px;
+    margin-top:0.3em;
+    padding-top:0;
+}
+
+
+/* reset margins for boxes + tables */
+div.box p, div.tablemargin p {
+    margin-right:0px;
+    margin-left:0px;
+}
+
+/* reset margins for images */ 
+div.box div.float-left, div.box div.float-right, div.box div.image-right, div.box div.image-left, div.box div.image-center {
+	margin-right:0px;
+	margin-bottom:0px;
+}
+
+/* remove margins for headings in tables */
+div.tablemargin ul, div.tablemargin h3, div.tablemargin h4, div.tablemargin h5, div.tablemargin h6, div.tablemargin h7  {
+    margin-right:0px;
+}
+
+div.box ul, div.box ol, div.box dl {
+    padding-left:0px;
+    margin-left:15px;
+    margin-right:0px;
+    padding-right:0px;
+}
+
+div.box ol.decimal {
+    padding-left:11px;
+    margin-left:15px;
+    margin-right:0px;
+    padding-right:0px;
+}
+
+.boxtitle, div.box h3, div.box h4, div.box h5, div.box h6, div.box h7 { 
+    font-size:1em;
+    font-weight:bold;
+    line-height:100%;
+    margin-top:5px;
+    padding-top:0px;
+    padding-right:0px; 
+    margin-right:20px;
+}
+
+div.box p, div.box ul, div.box ol {
+    line-height:120%;
+}
+
+div.box-border div.tablemargin {
+    margin-right:0px;
+    margin-bottom:0px;
+    width :200px;
+    padding:0px;
+}
+
+div.box-border table {
+    margin-bottom:0px;
+    padding-bottom:0px;    
+}
+
+div.box-border ul, div.box-border ol {
+    margin-bottom:10px;
+    padding-bottom:0px;
+}
+
+/* correct ie bug */
+ul p, ul.disc p, ul.square p,  ul.circle p, ol.decimal p, 
+ol.upper-roman p, ol.lower-roman p, ol.upper-alpha p, ol.lower-alpha p {
+    margin-right:0px;
+}
+
+/* remove margin for ul in ul, without removing 3col margin */
+ul ul.disc, ul ul.square, ul ul.circle, ul ol, ol ul, 
+ol ol.decimal, ol ol.upper-roman, ol ol.lower-roman, 
+ol ol.upper-alpha, ol ol.lower-alpha, 
+ul ol.decimal, ul ol.upper-roman, ul ol.lower-roman, 
+ul ol.upper-alpha, ul ol.lower-alpha,
+ol ul.disc, ol ul.square, ol ul.circle {
+    margin-right:0px;
+    margin-bottom:0px;
+    padding-bottom:0px;
+}
+
+/* remove margin for ul in tables*/
+table ul, table ol, table ul.disc, table ul.square, table ul.circle, table ul.nobullet
+table ol.decimal, table ol.upper-roman, table ol.lower-roman, 
+table ol.upper-alpha, table ol.lower-alpha, table ol.upper-alpha, table ol.lower-alpha, 
+table ol.decimal, table ol.upper-roman, table ol.lower-roman, 
+table ol.upper-alpha, table ol.lower-alpha,
+table ul.disc, table ul.square, table ul.circle {
+    margin-right:0px;
+    margin-bottom:0px;
+    padding-bottom:0px; 
+}
+
+
+/* new toc with ul */
+ul.toc {
+    margin-left:0px;padding-left:0px;
+}
+ul.toc, ul.toc ul {
+    list-style-type:none;
+    padding-bottom:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+}
+ul.toc li, ul.toc ul {
+    margin-top:2px;
+}
+
+div.contentblock-3col .citation, div.contentblock-3col blockquote,
+div.contentblock-1Bcol .citation, div.contentblock-1Bcol blockquote {
+    margin-right:240px;
+    padding-right:0px;
+}
+
+div.contentblock-3col .citation p, div.contentblock-3col blockquote p,
+div.contentblock-1Bcol .citation p, div.contentblock-1Bcol blockquote p {
+    margin-right:0px;
+}
+
+.citation, blockquote {
+    padding:10px;
+    margin-bottom:10px;
+    margin-top:10px;
+    margin-left:0px;
+}
+
+.citation .source, blockquote .source {
+    font-style:italic;
+}
+
+.citation .url, blockquote .url, .citation .author, blockquote .author, .citation .source, blockquote .source {
+    font-size:86%;
+    margin-right:10px;
+    margin-bottom:0px;
+}
+
+p.annotation {
+    /* position:relative; */
+    margin-bottom: 25px;
+    float: right;
+    clear:right;
+    width: 198px;
+    max-width:218px;
+    padding: 10px;
+    padding-top: 5px;
+}
+
+div.contentblock-3col p.annotation, div.contentblock-1Bcol p.annotation {
+    width: 198px;
+    max-width:218px;
+    line-height: 120%;
+    margin: 0px;
+    margin-bottom: 25px;
+    padding: 10px;
+    padding-top: 5px;
+}
+
+div.contentblock-2col p.annotation, div.contentblock-1col p.annotation  {
+    margin-left: 10px;
+}
+
+img {
+    border:0;
+}
+
+/* remove margins for images in tables */
+table .float-left, table .float-right, table .image-right, table .image-left, table .image-center {
+    margin-bottom:0px;
+	margin-right:0px;
+}
+
+div.tablemargin div.float-left, div.tablemargin div.float-right, div.tablemargin div.image-right, div.tablemargin div.image-left, div.tablemargin div.image-center {
+    margin-bottom:0px;
+	margin-right:0px;
+}
+
+/* sitemap */
+
+ul.sitemap {
+    margin-left:0px;
+}
+ul.sitemap, ul.sitemap h3, ul.sitemap h4, ul.sitemap ul {
+    list-style-type:none;
+    padding-bottom:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+}
+ul.sitemap li, ul.sitemap ul {
+    margin-top:8px;
+}
+
+li { 
+    margin-bottom:2px;
+    margin-top:1px;
+}
+
+
+.box li {
+    line-height:110%;
+    margin-bottom:2px;
+}
+
+br {clear:none;}
+nobr {word-wrap:normal;}
+
+/* hacks helpers*/
+
+/* remove it for mozilla */
+h2 + div.margins {
+    overflow: visible;
+}
+
+input.searchbutton {
+    padding: 0;
+    margin: 4px 0 0 0;
+}
+
+/* fixes ie win italics bug*/
+p, dt, dd {
+    overflow:visible;
+    _height:1%;
+}
+
+/* fixes cutg bug 24 */
+p.lead {
+    _height:auto;
+}
+
+/* only for IE Mac */
+
+/* end only for IE Mac */
+
+/*
+    IE Mac hack, overwrite for other browsers
+\*/
+
+pre {
+    overflow: auto;
+}
+
+.pathline {
+    left:20px;
+}
+
+/* remove blue outline for safari */
+* {outline: 0 none;}
+
+/* end ie mac hack */
+
+/* fix it back for mozilla 
+td > input.searchbutton {
+    margin-left:1px;
+}
+*/
+
+/* ie 3px fix */
+
+* html div.contentblock-3col,* html div.contentblock-2col,* html div.contentblock-1col, * html div.contentblock-1Bcol  {
+    height: 1em;
+}
+
+/* end hacks */ 
+
+
+
+/* -------------- COLORS -------------------- */
+/* background colors                          */
+/* see the following css:colors cxy.css */
+
+/* changes for new eth uni logo */
+body.bg_home_logo_eu  

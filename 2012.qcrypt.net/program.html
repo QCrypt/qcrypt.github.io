@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8" />
+	<title>QCRYPT 2012 - Scientific Program</title>
+	<link href="styles.css" rel="stylesheet" type="text/css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<script src="jquery-ui-1.8.21.custom.min.js" type="text/javascript"></script>
+	<script src="jquery.tools.min.js" type="text/javascript"></script>
+	<style type="text/css">
+		.talk-abstract { display: none; padding-left: 10px; border-left: #c93131 dotted 1px; text-align: justify; clear: left;}
+		.talk-title { font-weight: bold; text-shadow: 0px 1px 1px #ccc;}
+		.talk-authors {text-shadow: 0px 1px 1px #ddd;}
+		.contributed { padding: 0; margin: 0; list-style-type: none; }
+		ul.contributed li {margin: 20px 0;}
+		.abstract-show {cursor: pointer; color: #c93131; display: block; float: left; width: 79px;}
+		.abstract-show:hover {color: #000;}
+		.abstract-show .text {text-decoration: underline;}
+		.abstract-show-dummy {display: block; float: left; width: 79px;}
+		.math { font-style: italic;}
+		.speaker {text-decoration: underline;}
+		.program {width: 100%; border-collapse: collapse; border-spacing: 0;}
+		.talk{border-bottom: dotted 1px #ddd;}
+		.program td {padding: 5px 10px;}
+		.event {background-color: #fff5eb; border-bottom: solid 1px #fff;}
+		.time {width: 15%; vertical-align: top; padding-left: 100px;}
+		.extabstract2 {display: block; float: left; width: 149px;}
+		.slides {display: block; float: left; width: 79px;}
+		.video {display: block; float: left; width: 57px;}
+		.slides, .video, .extabstract2 {text-decoration: none;}
+		.slides .text, .video .text, .extabstract2 .text {text-decoration: underline;}
+		.tooltip {
+			display: none;
+			background: rgba(80,80,80,20); 
+			height: 64px; width: 180px; 
+			padding: 20px; border: white solid 2px; 
+			-moz-box-shadow:    3px 3px 5px 6px #ccc;
+  			-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  			box-shadow:         3px 3px 5px 6px #ccc;
+  		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(
+			function () {
+			
+				// Getting around a jQuery bug that does not always compute the size of a 
+				// hidden element correctly, and make buggy animations
+				// Let's do it manually.
+				$(".talk-abstract").show().each( function() {
+					$(this).css("height", $(this).height());
+				}).hide();
+				
+				// The jQuery magic
+				$(".abstract-show").click( function() {
+					abstr = $(this).siblings(".talk-abstract");
+					if (abstr.css('display') == 'none') {
+						abstr.show("drop", { direction: "left" }, "fast");
+						$(this).children(".imgabstract").attr('src', 'images/abstract-up.png');
+					
+					} else {
+						abstr.hide("drop", { direction: "right" }, "fast");
+						$(this).children(".imgabstract").attr('src', 'images/abstract-down.png');
+					}
+				});
+				
+				// When someone click on the abstract link on the menu, we need to trigger a click on the correct element.
+				// This is stored in a data-show HTML5 attribute.
+				$(".trigger-abstract-show").click( function() {
+					$($(this).attr("data-show")).trigger("click");
+				});
+				
+				// Tooltip when several formats are available for the slides
+				$(".download_choice").tooltip();
+			}
+		) 
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1 id="banner"><a href="index.html"><img src="images/banner.jpg" width="720" alt="QCRYPT 2012 – 2nd Annual Conference on Quantum Cryptography" /></a></h1>
+
+		<div id="container">
+			<div id="menu">
+				<nav><ul>
+					<li><a href="index.html">Information</a></li>
+					<li><a href="committees.html">Committees</a></li>
+					<li class="we-are-here">Scientific Program</li>
+					<li><a href="rump.html">Rump Session</a></li>
+				    <li><a href="industry.html">Industry Session</a></li>
+					<li><a href="submit.html">Submissions</a></li>
+					<li><a href="registration.html">Registration</a></li>
+					<li><a href="student-support.html">Student Support</a></li>
+					<li><a href="location.html">Conference Venue</a></li>
+					<li><a href="http://2012.qcrypt.net/dinnervenue.html">Dinner Venue</a></li>
+					<li><a href="accom.html">Accommodation</a></li>
+					<li><a href="traveltips.html">Travel Tips</a></li>
+					<li><a href="pictures.html">Pictures</a></li>					
+					<li><a href="charter.html">QCRYPT Charter</a></li>
+				</ul></nav>
+			</div>
+		
+			<div id="content" style="text-align: left;">
+				<h2 class="header">Scientific program</h2>
+				<ul>
+					<li><a href="program.html#focus-tutorials">Focus Tutorials</a></li>
+					<li><a href="program.html#invited-talks">Invited Talks</a></li>
+					<li><a href="program.html#public">Public Lecture</a></li>
+					<li><a href="program.html#schedule">Schedule</a> (<a href="program.html#Monday">Mon</a>, <a href="program.html#Tuesday">Tue</a>, <a href="program.html#Wednesday">Wed</a>, <a href="program.html#Thursday">Thu</a>, <a href="program.html#Friday">Fri</a>)</li>
+					<li><a href="program.html#posters">Posters</a></li>
+				</ul>
+				
+				<h3 id="focus-tutorials">Focus tutorial</h3>
+				<ul class="committee">
+					<li><a href="program.html#Maurer" class="trigger-abstract-show" data-show="#Maurer .abstract-show">Ueli Maurer</a> (Authentication)</li>
+					<li><a href="program.html#Marco" class="trigger-abstract-show" data-show="#Marco .abstract-show">Marco Tomamichel</a> (Smooth min/max entropies)</li>
+					<li><a href="program.html#Gregor" class="trigger-abstract-show" data-show="#Gregor .abstract-show">Gregor Weihs</a> (Optics)</li>
+					<li><a href="program.html#Juerg" class="trigger-abstract-show" data-show="#Juerg .abstract-show">Juerg Wullschleger</a> (Cryptographic primitives)</li>
+				</ul>
+						
+				<h3 id="invited-talks">Invited Talks</h3>
+				<ul class="committee">
+					<li><a href="program.html#Toni" class="trigger-abstract-show" data-show="#Toni .abstract-show">Toni Acin</a> (Randomness and quantum non-locality)</li>
+					<li><a href="program.html#Timoney" class="trigger-abstract-show" data-show="#Timoney .abstract-show">Nuala Timoney</a> (Solid-state quantum memories for quantum repeaters)</li>
+					<li><a href="program.html#Paul" class="trigger-abstract-show" data-show="#Paul .abstract-show">Paul Christiano</a> (Quantum money from hidden subspaces)</li>
+					<li><a href="program.html#Kent" class="trigger-abstract-show" data-show="#Kent .abstract-show">Adrian Kent</a> (Quantum cryptography in Minkowski space)</li>
+					<li><a href="program.html#Manas" class="trigger-abstract-show" data-show="#Manas .abstract-show">Manas Kumar Patra</a> (Probing the reality of quantum state)</li>
+					<!--<li><a href="#Jian-Wei" class="trigger-abstract-show" data-show="#Jian-Wei .abstract-show">Jian-Wei Pan</a> (Recent experiments on quantum network with photons and atoms)</li>-->
+					<li><a href="program.html#Masahide" class="trigger-abstract-show" data-show="#Masahide .abstract-show">Masahide Sasaki</a> (QKD widened and deepened)</li>
+					<li><a href="program.html#Davin" class="trigger-abstract-show" data-show="#Davin .abstract-show">Devin Smith</a> (Quantum steering: experiments and applications)</li>
+					<li><a href="program.html#Vidick" class="trigger-abstract-show" data-show="#Vidick .abstract-show">Thomas Vidick</a> (Certifiable quantum dice – Or, universally composable randomness expansion)</li>
+				</ul>
+				
+				<h3 id="public">Public Lecture</h3>
+				<ul class="committee">
+					<li><a href="program.html#Brassard" class="trigger-abstract-show" data-show="#Brassard .abstract-show">Gilles Brassard</a> (Rise of the Quantum Age)</li>
+				</ul>
+
+				
+				<!-- The schedule starts here--> 
+	
+				<h2 id="schedule" style="font-size: 24pt; padding-top: 40px;">Schedule</h2>
+		
+				<p><img src="images/gcal.png" height="40" alt="Google Calendar Logo" style="float: left;" /><strong>Stay up to date:</strong><br />you can see the schedule in <a href="https://www.google.com/calendar/embed?src=8haj5m8q0mnlr7o33qbnt39kj0%40group.calendar.google.com&amp;ctz=Asia/Singapore">Google Calendar</a> or add it to your agenda [<a href="https://www.google.com/calendar/ical/8haj5m8q0mnlr7o33qbnt39kj0%40group.calendar.google.com/public/basic.ics">ical</a>].</p>
+		
+				<div>
+					<h3 id="Monday">Monday (10th September)</h3>
+				 
+					<table class="program">
+						<tbody>
+							<tr class="event">
+								<td class="time">08:30</td>
+								<td>
+									<span class="talk-title">Registration</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="time">09:30</td>
+								<td id="Masahide">
+									<span class="talk-title">Keynote: QKD widened and deepened</span><br />
+									<span class="talk-authors speaker">Masahide Sasaki</span><br />
+									<span class="abstract-show-dummy">&nbsp;</span>
+<span class="extabstract2">&nbsp;</span>
+<span class="slides">&nbsp;</span>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-10/?doi=10.3930/ETHZ/AV-8b57ec40-d327-4cc4-8cd0-bb7eb845e2bc&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								</td>
+							</tr>
+							<tr class="event">
+								<td class="time">10:30</td>
+								<td><span class="talk-title">Coffee Break</span></td>
+							</tr>
+							<tr class="talk">
+								<td class="time">11:00</td>
+								<td id="Vidick">
+									<span class="talk-title">Invited Talk: Certifiable quantum dice <br/> Or, universally composable randomness expansion</span><br />
+									<span class="talk-authors speaker">Thomas Vidick</span><br />
+									<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<span class="extabstract2">&nbsp;</span>
+<a href="docs/slides/Vidick.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-10/?doi=10.3930/ETHZ/AV-f5fd2a66-8217-4aae-b72e-0ad5c6c0f05c&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+									<div class="talk-abstract">
+										<p>Randomness is a fundamental resource in modern cryptography. The generation of uniformly random bits using quantum mechanics, while still experimentally challenging, is straightforward from a purely theoretical point of view. Nevertheless, for cryptographic applications it is often crucial to ensure that the random bits generated are completely secure and uncorrelated with any potential “adversary”. For instance, one may imagine that the manufacturer of the randomness-generation device introduced “backdoor entanglement” between the device and her own lab, thereby potentially gaining access to the “random” bits generated.</p>
+										<p>In this talk I will address the question of generating certifiable, fully secure random bits. I will describe a simple protocol that stretches an initial (log <span class="math">n</span>)-bit random string into n random bits. The bits generated are secure, i.e. appear uniformly random from the point of view of any (quantum) adversary, based only on the verification of a simple statistical test based on the CHSH inequality. No assumptions on the randomness-generating device are made other than that is is formed of two components that do not signal to each other. These results strengthen and extend previous work by Colbeck (2009), who first introduced the task of device-independent randomness expansion, and Pironio <span style="font-style: italic;">et al.</span> (Nature 2010), who gave the first rigorous analysis in the non-adversarial setting.</p>
+										<p>The proof of security of our protocol relies on a technique, the “quantum reconstruction paradigm”, previously introduced in the analysis of the task of randomness extraction in connection with privacy amplification. I will introduce that technique and show how it is applied to the setting of randomness expansion.</p>
+										<p>Based on joint work with Umesh Vazirani, <a href="http://arxiv.org/abs/1111.6054">arXiv:1111.6054</a>.</p>
+									</div>
+								</td>
+							</tr>
+							<tr class="talk">
+								<td class="time">11:50</td>
+								<td>
+									<span class="talk-title">Quantum to classical randomness extractors</span><br />
+									<span class="talk-authors"><span class="speaker">Mario Berta</span>, Omar Fawzi, and Stephanie Wehner</span><br />
+									<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_46.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/46.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-10/?doi=10.3930/ETHZ/AV-966ccb67-d821-4201-8d84-d478b3a818d0&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+									<div class="talk-abstract">
+										<p>The goal of randomness extraction is to distill (almost) perfect randomness from a weak source of randomness. When the source yields a classical string X, many extractor constructions are known. Yet, when considering a physical randomness source, X is itself ultimately the result of a measurement on an underlying quantum system. When characterizing the power of a source to supply randomness it is hence a natural question to ask, how much classical randomness we can extract from a quantum system. To tackle this question we here take on the study of quantum to classical randomness extractors (QC-extractors). We provide constructions of QC-extractors based on measurements in a full set of mutually unbiased bases (MUBs), and certain single qubit measurements. As the first application, we show that any QC-extractor gives rise to entropic uncertainty relations with respect to quantum side information. Such relations were previously only known for two measurements. As the second application, we resolve the central open question in the noisy-storage model [Wehner et al., PRL 100, 220502 (2008)] by linking security to the quantum capacity of the adversary’s storage device.</p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="time">12:15</td>
+								<td>
+									<span class="talk-title">Quantum cryptography with local Bell tests</span><br />
+									<span class="talk-authors"><span class="speaker">Charles Ci Wen Lim</span>, Christopher Portmann, Marco Tomamichel, Renato Renner, and Nicolas Gisin</span><br />
+									<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_68.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/68.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-10/?doi=10.3930/ETHZ/AV-05a9c3c6-981d-459d-ad1e-4aa7587d2e3e&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+									<div class="talk-abstract">
+										<p>In this work, we propose the concept of self-testing QKD which is based on a novel local self-testing method. In particular, devices are tested locally independent of the quantum channel, that is, Alice and Bob perform Clauser-Horne-Shimony-Holt (CHSH) tests, an application of Bell's theorem on their own devices, independent of each other and the quantum channel. Note that because the quantum channel is not included in CHSH test, the channel loss cannot be used to open the detection loophole. The security assessment of the quantum channel follows the channel estimation technique of BB84 QKD protocol, i.e., checking for errors in the bases X and Z. Therefore, by deriving the relation between CHSH test and a recent security proof technique (the smooth version of entropic uncertainty relation), the finite-key security proof is obtained under minimal assumptions. Also, our result – a lower bound on the secret key rate – is intuitively related to the almost tight finite-key analysis of BB84 QKD protocol and it differs only by a term that is dependent on the CHSH value. Most importantly, we obtained secret key rates that are comparable to ones of BB84 QKD protocol.</p>
+									</div>
+								</td>
+							</tr>
+							<tr class="event">
+								<td class="time">12:40</td>
+								<td><span class="talk-title">Lunch</span></td>
+							</tr>
+							<tr class="talk">
+								<td class="time">14:00</td>
+								<td id="Paul">
+									<span class="talk-title">Invited Talk: Quantum Money from Hidden Subspaces</span><br />
+									<span class="talk-authors speaker">Paul Christiano</span><br />
+									<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<span class="extabstract2">&nbsp;</span>
+<a class="download_choice" href="program.html#"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /><img src="images/pptx.png" alt="Keynote icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+				<div class="tooltip"><a href="docs/slides/Paul.pdf"><img src="images/pdf_l.png" alt="PDF" height="64" width="64" /></a> <a href="docs/slides/Paul.pptx"><img src="images/pptx.png" alt="Keynote" height="64" width="64" style="float: right;" /></a></div><a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-10/?doi=10.3930/ETHZ/AV-26a61489-2bf7-4b88-8c55-61181503d43b&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+									<div class="talk-abstract">
+										<p>Forty years ago, Wiesner pointed out that quantum mechanics raises the striking possibility of money that cannot be counterfeited according to the laws of physics. We propose the first quantum money scheme that is (1) public-key, meaning that anyone can verify a banknote as genuine, not only the bank that printed it, and (2) cryptographically secure, under a “classical” hardness assumption that has nothing to do with quantum money. Our scheme is based on hidden subspaces, encoded as the zero-sets of random multivariate polynomials. A main technical advance is to show that the “black-box” version of our scheme, where the polynomials are replaced by classical oracles, is unconditionally secure. Even in Wiesner's original setting – quantum money that can only be verified by the bank – we are able to use our techniques to patch a major security hole in Wiesner's scheme. We give the first private-key quantum money scheme that allows unlimited verifications and that remains unconditionally secure, even if the counterfeiter can interact adaptively with the bank. Our money scheme is simpler than previous public-key quantum money schemes, including a knot-based  scheme of Farhi <span style="font-style: italic;">et al</span>. The verifier needs to perform only two tests, one in the standard basis and one in the Hadamard basis – matching the original intuition for quantum money, based on the existence of complementary observables.</p>
+										<p>Based on joint work with Scott Aaronson.</p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="time">14:50</td>
+								<td>
+									<span class="talk-title">Memory attacks on device-independent quantum cryptography</span><br />
+									<span class="talk-authors">Jonathan Barrett, <span class="speaker">Roger Colbeck</span>, and Adrian Kent</span><br />
+									<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_38.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/38.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-10/?doi=10.3930/ETHZ/AV-b69f8272-dee9-4b0c-b982-55e0ae7ecb93&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+									<div class="talk-abstract">
+										<p>Device-independent quantum cryptographic schemes aim to guarantee security to users based only on the output statistics of any components used, and without the need to verify their internal functionality. Since this would protect users against untrustworthy or incompetent manufacturers, sabotage or device degradation, this idea has excited much interest, and many device-independent schemes have been proposed. Here we identify a critical weakness of device-independent quantum cryptographic protocols that rely on public communication between secure laboratories. Untrusted devices may record their inputs and outputs and reveal information about them via publicly discussed outputs during later runs. Reusing devices thus compromises the security of a protocol and risks leaking secret data. Possible defences include securely destroying or isolating used devices. However, these are costly and often impractical. We briefly consider other possible defences available in scenarios where device reuse is restricted.</p>
+									</div>
+								</td>
+							</tr>
+							<tr class="event">
+								<td class="time">15:15</td>
+								<td><span class="talk-title">Coffee Break</span></td>
+							</tr>
+							<tr class="talk">
+								<td class="time">15:45</td>
+								<td>
+									<span class="talk-title">A quantum key distribution system immune to detector attacks</span><br />
+									<span class="talk-authors">Allison Rubenok, <span class="speaker">Joshua Slater</span>, Philip Chan, Itzel Lucio-Martinez, and Wolfgang Tittel</span><br />
+									<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_49.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/49.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-10/?doi=10.3930/ETHZ/AV-b69f8272-dee9-4b0c-b982-55e0ae7ecb93&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+									<div class="talk-abstract">
+										<p>Quantum cryptography promises the distribution of cryptographic keys secured by fundamental laws of quantum physics. However, results in quantum hacking have demonstrated that the information theoretic security of quantum cryptography protocols does not guarantee security for actual implementations. Most notable are attacks against the vulnerabilities of single photon detectors [1-4]. In this talk we will report the first proof-of-principle demonstration of a new protocol that removes the threat of any such attack [5]. We demonstrated the protocol over 80 km of spooled fibre as well as across different locations within the city of Calgary [6], confirming this protocol as a realistic approach to secure communication and demonstrating the possibility for controlled two-photon interference in a real-world environment, which is a remaining obstacle to realizing quantum repeaters and quantum networks.</p>
+										<p>[1] Lamas-Linares, A., Kurtsiefer, C. Breaking a quantum key distribution system through a timing side channel, Opt. Express 15 (15), 9388-9393 (2007).<br />
+										   [2] Zhao, Y., Fung, C.-H. F., Qi, B., Chen, C. & Lo, H.-K. Quantum Hacking: Experimental demonstration of time-shift attack against practical quantum key distribution systems. Phys. Rev. A 78, 042333 (2008).<br />
+										   [3] Lydersen, L., Wiechers, C., Wittmann, C., Elser, D., Skaar, J. & Makarov, V. Hacking commercial quantum cryptography systems by tailored bright illumination. Nature Photonics 4, 686–689 (2010).<br />
+										   [4] Lydersen, L., Wiechers, C., Wittmann, C., Elser, D., Skaar, J. & Makarov, V. Thermal blinding of gated detectors in quantum cryptography. Opt. Express 18 (26), 27938-27954 (2010).<br />
+										   [5] Lo, H.-K., Curty, M. & Qi, B. Measurement-device-independent quantum key distribution. Phys. Rev. Lett. 108, 130503 (2012).<br />
+										   [6] Rubenok, A., Slater, J. A., Chan, P., Lucio-Martinez, I., & Tittel, W. Proof-of-principle field test of quantum key distribution immune to detector attacks. arXiv:1204.0738v1 (2012).
+										</p>
+									</div>
+								</td>
+							</tr>
+							<tr class="talk">
+								<td class="time">16:10</td>
+								<!--<td>
+									<span class="talk-title">Higher-dimensional quantum cryptography</span><br />
+									<span class="talk-authors">Bradley Christensen, Kevin McCusker, Daniel Gauthier, Daniel Kumor, Venkat Chandar, and Paul Kwiat</span><br />
+									<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_21.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<span class="slides">&nbsp;</span>
+									<div class="talk-abstract">
+										<p>We discuss the progress on a high-data rate quantum cryptography system. This system is realized by simultaneously entangling photons in both polarization and time-bin. The majority of the information is transmitted through the timing degree of freedom; the polarization degree of freedom adds additional entropy.</p>
+									</div>
+								</td>-->
+								<td>
+								<span class="talk-title">Security of continuous-variable quantum key distribution against general attacks</span><br />
+								<span class="talk-authors"><span class="speaker">Anthony Leverrier</span>, Raúl García-Patrón, Renato Renner, and Nicolas Cerf</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_50.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/50.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-10/?doi=10.3930/ETHZ/AV-15c47ecd-dca4-414e-93d6-b2c244bcd2b0&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>We prove that Gaussian continuous-variable quantum key distribution protocols, using a Gaussian distribution of coherent or squeezed states and homodyne or heterodyne measurement, are secure against arbitrary attacks.</p>
+									<p>Our proof exploits the speciﬁc symmetries in phase-space of Gaussian QKD protocols to prove that once a simple test over the measurement outcomes succeeds, the global state shared between Alice and Bob is well decribed by assigning a low dimensional Hilbert space to each mode. Then one can use the postselection technique introduced by Christandl, Koenig and Renner for discrete-variable protocols to conclude.</p>
+									<p>Our result greatly improves over previous ones using either a de Finetti theorem or an entropic uncertainty principle which could not be applied to prove the security of protocols in realistic experimental implementations.</p>
+								</div>
+							</td>
+							</tr>
+							<tr>
+								<td class="time">16:35</td>
+								<td>
+									<span class="talk-title">Infrared NbN superconducting single-photon detector for quantum cryptography and quantum information processing</span><br />
+									<span class="talk-authors"><span class="speaker">Alexander Korneev</span>, Alexander Divochy, Yury Vachtomin, Konstantin Smirnov, and Gregory Goltsman</span><br />
+									<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_64.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/64.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-10/?doi=10.3930/ETHZ/AV-2e92f62a-206f-4c2b-b254-dae38276c826&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+									<div class="talk-abstract">
+										<p>We present the overview of our recent results in research and development of superconducting single-photon detector (SSPD) practical applications such as quantum cryptography. By optimization of fabrication process and usage of high-quality silicon wafers with SiO<sub>2</sub> layer acting as a microcavity we managed to reach up to 35.6% detection efficiency at 1500 nm wavelength. Also we extended its wavelength range beyond 1800 nm by the usage of the fluoride ZBLAN fibres.</p>
+									</div>
+								</td>
+							</tr>
+							<tr class="event">
+								<td class="time">17:00</td>
+								<td><span class="talk-title">Reception</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				
+				<!-- TUESDAY -->
+
+				<h3 id="Tuesday">Tuesday (11th September)</h3>
+				<table class="program">
+					<tbody>
+						<tr>
+							<td class="time">09:00</td>
+							<td id="Ueli">
+								<span class="talk-title">Focus Tutorial: Authentication </span><br />
+								<span class="talk-authors speaker">Ueli Maurer</span><br />
+								<span class="abstract-show-dummy">&nbsp;</span>
+<span class="extabstract2">&nbsp;</span>
+<a href="docs/slides/Maurer.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-11/?doi=10.3930/ETHZ/AV-b23d9c5c-6cec-4c7b-9d74-3fa6966a5b01&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+							</td>
+						</tr>
+						<tr class="event">
+							<td class="time">10:30</td>
+							<td><span class="talk-title">Coffee Break</span></td>
+						</tr>
+						<tr class="talk">
+							<td class="time">11:00</td>
+							<td id="Timoney">
+								<span class="talk-title">Invited Talk: Solid-state quantum memories for quantum repeaters </span><br />
+								<span class="talk-authors speaker">Nuala Timoney</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<span class="extabstract2">&nbsp;</span>
+<a href="docs/slides/Timoney.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-11/?doi=10.3930/ETHZ/AV-cb4674b1-01dd-4608-9fa0-2f5926947203&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>The maximal transmission distance of optical quantum communication is reaching a hard limit imposed by the intrinsic loss of the transmission medium, e.g. optical fibre.  A quantum repeater promises to push that limit towards much longer, potentially intercontinental distances. Its implementation relies on the development of efficient and long-lived quantum memories that can store and retrieve the quantum properties of light. Sources of photonic entanglement, tailored for quantum memories, are also necessary and represent a challenging experimental task.</p>
+									<p>I will review the efforts of our group towards the realization of quantum memories based on rare-earth-ion doped crystals (REIC) as well as a matching source of photon pair. This approach has recently allowed us to demonstrate several features that are of great importance for quantum repeaters, and for quantum networks in general.</p>
+									<p>After a brief introduction, I will show how we have successfully entangled two neodymium-doped crystals in a heralded fashion. I will then show how polarization qubits encoded in true single photons can be stored in such crystals, despite their intrinsic birefringence and polarization-dependant absorption. I will finally present an on-demand quantum memory exploiting the long hyperfine coherence time of europium ions to store light for up to 8 ms. Our results highlight the great potential of REIC for quantum repeaters.</p>
+								</div>
+							</td>
+						</tr>
+						<tr class="talk">
+							<td class="time">11:50</td>
+							<td>
+								<span class="talk-title">Frequency-multiplexed photon storage and read-out on demand using an atomic frequency comb-based quantum memory</span><br />
+								<span class="talk-authors">Neil Sinclair, Erhan Saglamyurek, Hassan Mallahzadeh, Joshua A. Slater, Jeongwan Jin, Daniel Oblak, Mathew George, Raimund Ricken, Wolfgang Sohler, and <span class="speaker">Wolfgang Tittel</span></span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<span class="extabstract2">&nbsp;</span>
+<a href="docs/slides/666.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-11/?doi=10.3930/ETHZ/AV-e94f12eb-eee3-4fe7-b8d0-de1b2ea98bd0&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>The ability to send quantum information encoded in photons over large distances is hampered by the unavoidable loss in the communication channel. In classical communication, channel-loss is alleviated by amplifying the information carrier, however, due to the no-cloning theorem for quantum states, this approach is not viable for quantum communication channels. Instead long-distance quantum communication can be enabled by quantum-repeaters, which serve to distribute entanglement over the entire channel by means of entanglement swapping between subdivision of the channel [1]. In order to synchronize the process of entanglement swapping between adjacent subdivisions, quantum repeaters must incorporate quantum memories [2]. A quantum memory is a device that has the ability to (reversibly) map quantum states between photons and atoms [3]. In most of the quantum repeater architectures proposed to date, it is required that quantum memories feature recall on demand. Other desirable attributes of a quantum memory are high fidelity and efficiency, long storage times, and the possibility to simultaneously store multiple carriers of quantum information, i.e. record multiple photonic modes. The combination of a quantum state storage protocol based on an atomic frequency comb (AFC) [4] with rare-earth-ion doped crystals cooled to cryogenic temperatures as storage materials [5] has been shown to meet many of these requirements. In particular, it is well suited for storage of temporally multiplexed photons [6,7]. Yet, despite first proof-of-principle demonstrations [8], recalling the quantum information at a desired time (i.e. read-out on demand) with broadband, single-photon-level pulses remains an outstanding challenge. Fortunately, the AFC protocol allows not only for multimode storage in the time domain, but also in the frequency domain.
+									<p>Here, we will present the first experimental demonstration of frequency-multiplexed storage of attenuated laser pulses followed by read-out on demand in the frequency domain, pointing to a quantum repeater architecture based on frequency multiplexing. Our work is based on the AFC protocol and employs a Tm-doped LiNbO3 waveguide cooled to 4 K [9,10]. Using a serrodyne sideband chirping technique we prepare several frequency-combs in the atomic absorption spectrum. Each section of AFC is a few 100 MHz wide and since we vary the comb-tooth spacing in each section we prepare them with different storage times on the order of 20-150 ns. After the AFC preparation, we send a probe pulse, which is modulated to contain several frequency components that correspond to the centre frequencies of the AFC sections. The mean photon number in each mode is set to be around one. As the probe pulse is mapped to our quantum memory the different frequency modes are mapped to different sections of the AFC and thus recalled at different times. The recalled pulses pass through a frequency filter with a bandwidth matching a single frequency mode. Before frequency filtering we are able to impart again a frequency shift on the recalled pulses, which can hence be set to pass the spectral filter. This constitutes recall on demand of a particular frequency mode. Our multimode quantum memory is highly flexible and can be set to recall all modes at the same time, and adapted to broader or narrower frequency modes. In addition it has been shown to faithfully store time bin qubits in pure and entangled states and preserve all degrees of freedom of the photonic wavefunction [9,11].
+									<p>Finally, we will argue that, in view of a quantum repeater, our approach based on a multimode memory with read-out on demand in the frequency domain is equivalent to temporal multiplexing and read-out on demand in the temporal domain. This overcomes one further obstacle to building quantum repeaters using rare-earth-ion doped crystals as memory devices.
+									<p>[1] H.-J. Briegel, et al., Phys. Rev. Lett., 81, 5932 (1998)<br />
+									   [2] N. Sangouard, et al., Rev. Mod. Phys., 83(1), 33 (2011)<br />
+									   [3] A. I. Lvovsky, B. C. Sanders, and W. Tittel, Nat. Photon, 3(12), 706 (2009)<br />
+									   [4] M. Afzelius, et al., Phys. Rev. A, 79(5), 052329 (2009)<br />
+									   [5] W. Tittel, et al., Laser & Photonics Rev., 4(2), 244 (2010)<br />
+									   [6] I. Usmani, et al., Nat Commun, 1 (2010)<br />
+									   [7] M. Bonarota, J.-L. Le Gouët, and T. Chanelière, New J. of Phys., 13(1), 013013 (2011)<br />
+									   [8] M. Afzelius, et al., Phys. Rev. Lett., 104, 040503 (2010)<br />
+									   [9] E. Saglamyurek, et al., Nature, 469(7331), 512 (2011)<br />
+									   [10] N. Sinclair, et al., J. of Luminescence, 130(9), 1586 (2010)<br />
+									   [11] E. Saglamyurek, et al., Phys. Rev. Lett., 108, 083602 (2012)
+									</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="time">12:15</td>
+							<td>
+								<span class="talk-title">1 Mbps coherent one-way QKD with dense wavelength division multiplexing and hardware key distillation</span><br />
+								<span class="talk-authors"><span class="speaker">Nino Walenta</span>, Andreas Burg, Jeremy Constantin, Nicolas Gisin, Olivier Guinnard, Raphael Houlmann, Charles Ci Wen Lim, Tommaso Lunghi, and Hugo Zbinden</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_35.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/35.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-11/?doi=10.3930/ETHZ/AV-4b5cfb86-9456-49b5-8a15-260ce7cc3b03&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>We present the latest results obtained with a quantum cryptography prototype based on a coherent-one way quantum key distribution (QKD) scheme. To support its continuous high rate secret key generation we developed different low-noise single photon detectors for telecom wavelength based on a sine gating and low-pass-filtering technique, as well as a negative feedback APD in an active hold-off circuit. A newly developed hardware distillation engine allows for continuous operation of secret key distribution up to 1 Mbps. We also present results of our system in a DWDM (dense wavelength-division multiplexing) configuration where only one single fiber is needed to interconnect Alice' and Bob's systems. The final prototype is fully compatible to serve a high-speed encryption device developed in parallel which provides encrypted communication of up to 100 Gbps.</p>
+								</div>
+							</td>
+						</tr>
+						<tr class="event">
+							<td class="time">12:40</td>
+							<td><span class="talk-title">Lunch</span></td>
+						</tr>
+						<tr class="talk">
+							<td class="time">14:00</td>
+							<td id="Kent">
+								<span class="talk-title">Invited Talk: Quantum cryptography in Minkowski space</span><br />
+								<span class="talk-authors speaker">Adrian Kent</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<span class="extabstract2">&nbsp;</span>
+<a href="docs/slides/Kent.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-11/?doi=10.3930/ETHZ/AV-10c8637a-71b8-4b73-bd85-66a33d6cb04a&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>Quantum theory and the relativistic no-signalling principle both give ways of controlling information, in the sense that someone who creates information somewhere in space-time can rely on strict limits both on how much information another party can extract and on where they can obtain it. An increasingly long list of interesting cryptographic applications exploit the power of the no-signalling principle as well as the properties of quantum information. I describe recent work in this area, including secure protocols for bit commitment, quantum tagging (quantum position authentication) and new intrinsically relativistic cryptographic tasks.</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="time">14:50</td>
+							<td>
+								<span class="talk-title">Secure bit commitment from relativistic constraints</span><br />
+								<span class="talk-authors"><span class="speaker">Jędrzej Kaniewski</span>, Marco Tomamichel, Esther Hänggi, and Stephanie Wehner</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_66.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/66.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-11/?doi=10.3930/ETHZ/AV-6e210c9e-76ee-4b49-af6c-74144430e537&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>We investigate two-party cryptographic protocols that are secure under assumptions motivated by physics, namely relativistic assumptions (no-signalling) and quantum mechanics. In particular, we discuss split models, i.e. models in which certain parties are not allowed to communicate during certain phases of the protocol, for the purpose of bit commitment. We find the minimal splits that are necessary to evade the Mayers-Lo-Chau no-go argument and present protocols that achieve security in these split models.</p>
+									<p>Furthermore, we introduce the notion of local versus global commands, a subtle issue that arises when the split committer is required to delegate agents to perform the open phase separately, without communication. We argue that classical protocols are insecure in the global command model, even when the committer is split. On the other hand, we provide a rigorous security proof in the global command model for a quantum protocol proposed by Kent. The proof employs two fundamental principles of modern physics, the no-signalling property of relativity and the uncertainty principle of quantum mechanics.</p>
+								</div>
+							</td>
+						</tr>
+						<tr class="event">
+							<td class="time">15:15</td>
+							<td><span class="talk-title">Coffee Break</span></td>
+						</tr>
+						<tr class="event">
+							<td class="time">15:45</td>
+							<td><span class="talk-title">Poster Session</span> (<a href="program.html#posters">List</a>)</td>
+						</tr>
+						<tr id="Brassard" class="event">
+							<td class="time">18:30</td>
+							<td>
+								<span class="talk-title">Public Lecture: Rise of the Quantum Age</span> (<a href="http://www.quantumlah.org/main/publicevents.php">More info</a> | <a href="https://cqt2.eventbrite.com/">Register</a>)<br />
+								<span class="talk-authors speaker">Gilles Brassard</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<span class="extabstract2">&nbsp;</span>
+<span class="slides">&nbsp;</span>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-11/?doi=10.3930/ETHZ/AV-13506b09-61ad-4ef4-b897-8a5b28ec3814&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p><strong>This public talk will be set at an elementary level and no prior knowledge of quantum mechanics will be assumed. Please <a href="https://cqt2.eventbrite.com/">register</a> if you plan to attend.</strong></p>
+									<p><strong>Abstract:</strong><br />Quantum mechanics is perhaps the most profound revolution ever to occur in our understanding of Nature. While born with last century, it appeared for many decades to be just a game, played by physicists strictly for the sake of advancing pure knowledge, without any impact on everyday life. And then, quantum mechanics gave birth to the transistor, and society was transformed forever. The physicists’ “game” ushered in the Information Age, which is the signature of the 20th century, just as the 19th century was the Machine Age. But we are poised to experience a second quantum revolution in which the full power of the quantum world will be unleashed in ways never before thought possible, transmitting and processing information with unconditionally secure communication and computers powerful beyond imagination. Indeed, the 21st century will go down in history as the Quantum Age.</p>
+									<p><strong>About the speaker:</strong><br />Professor of computer science and Canada Research Chair at the Université de Montréal, Gilles Brassard laid the foundations of quantum cryptography at a time when only a handful of people worldwide were interested in quantum information science. He is among the inventors of quantum teleportation, which is universally recognized as a fundamental keystone of the discipline. Editor-in-Chief for Journal of Cryptology from 1991 until 1997, he is the author of three books that have been translated into eight languages. He is a Fellow of the Academy of Science of the Royal Society of Canada, of the Canadian Institute for Advanced Research and of the International Association for Cryptologic Research. Among his many awards, we note the Prix Marie-Victorin, the Rank Prize in Opto-Electronics, the NSERC Gerhard Herzberg Canada Gold Medal for Science and Engineering and the Killam Prize for natural sciences. Foreign member of the Academia Europaea, he was awarded a honorary doctorate by the ETH in Zürich.</p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+				<!-- WEDNESDAY -->
+					
+				<h3 id="Wednesday">Wednesday (12th September)</h3>
+				 
+				<table class="program">
+					<tbody>
+						<tr>
+							<td class="time">09:00</td>
+							<td id="Gregor" >
+								<span class="talk-title">Focus Tutorial: Optics</span><br />
+								<span class="talk-authors speaker">Gregor Weihs</span><br />
+								<span class="abstract-show-dummy">&nbsp;</span>
+<span class="extabstract2">&nbsp;</span>
+<a href="docs/slides/Gregor.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-12/?doi=10.3930/ETHZ/AV-302ff403-04dc-4492-bbd3-ad4d8df5bea3&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+							</td>
+						</tr>
+						<tr class="event">
+							<td class="time">10:30</td>
+							<td><span class="talk-title">Coffee Break</span></td>
+						</tr>
+						<tr class="talk">
+							<td class="time">11:00</td>
+<!--							<td id="Jian-Wei">
+								<span class="talk-title">Invited Talk: Recent experiments on quantum network with photons and atoms</span><br />
+								<span class="talk-authors speaker">Jian-Wei Pan</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<span class="extabstract2">&nbsp;</span>
+<span class="slides">&nbsp;</span>
+								<div class="talk-abstract">
+									<p>Quantum information technology has been developing rapidly in last two decades. Very recently, quite a few optical quantum key distribution networks have been reported, enabling preliminary practical applications in secure information transfer. Meanwhile, a number of significant progresses based on quantum network have also been made in the research of linear optical quantum computing, simulation and metrology. However, on the way towards large-scale optical quantum network serious problems occur. On the one hand, the distance of fiber‐based quantum communication is limited, due to intrinsic fiber loss and decreasing of entanglement quality caused by the noisy environment. On the other hand, the probabilistic feature of single and entangled photon sources would also cause an exponentially increasing overhead for large-scale quantum network.</p>
+									<p>To solve the above problems, quantum repeaters and/or transmission of optical quantum bits over free space channel can be efficiently exploited for future wide‐area realization of quantum communication. In addition, memory built-in quantum repeaters would also enable scalable linear optical quantum computing, simulation and high precision measurement. In this talk I will present some recent experiments from our group, including eight-photon entanglement, topological quantum error-correction, quantum repeater and efficient and long-lived quantum memory, and entanglement distribution and quantum teleportation over 100 km-scale free-space quantum channels. These experiments show the promising future possibility towards scalable quantum network with photons and atoms.</p>
+								</div>
+							</td>-->
+							<td class="align-left" id="Manas">
+								<span class="talk-title">Invited Talk: Probing the reality of quantum state</span><br />
+								<span class="talk-authors speaker">Manas Kumar Patra</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<span class="extabstract2">&nbsp;</span>
+<a href="docs/slides/Manas.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-12/?doi=10.3930/ETHZ/AV-175b8e27-f994-42f6-b47b-b93235e5d5ac&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>Is the quantum state real – a property of the system it is assigned to? Or does it represent only our (incomplete) knowledge of the system? It is possible that the second alternative – the epistemic character of the quantum state – comes about because quantum mechanics is obtained by some statistical averaging over a “complete” theory of nature. Such models are often called “hidden variable” models, because the true variables describing the system, the ontic state, are not accessible.</p>
+									<p>Recently Pusey, Barrett and Rudolph [1] showed that, assuming the natural assumption of “preparation independence”, epistemic models of the quantum state are in contradiction with the predictions of quantum theory. “Preparation independence” means that independent preparations of systems correspond to a joint distribution (over the ontic states) is the product of individual distributions.</p>
+									<p>Here we adopt a different approach. We show that, assuming both a form of continuity and separability (a weak form of preparation independence), epistemic interpretations of the quantum state are in contradiction with quantum theory. We also discuss some implications of “hidden-variable” models for cryptography.</p>
+									<p>We then describe a simple high-precision experiment optics experiment that tests some of the predictions of continuous and separable epistemic models. The experiment is particularly simple. It involves attenuated coherent states in time bins of dimension up to 80 propagating in optical fibres. Our experimental results are in agreement with the predictions of quantum theory and provide strong constraints on possible epistemic extensions of quantum mechanics. These results are reported in [2].</p>
+									<p>[1] M. F. Pusey, J. Barrett, and T. Rudolph, On the reality of the quantum state, Nature Physics, 2309, (2012).<br />
+									   [2] M. K. Patra, L. Olislager, F. Duport, J. Safioui, S. Pironio and S. Massar, Experimentally probing the reality of the quantum state, submitted (2012)</p>
+								</div>
+							</td>
+						</tr>
+						<tr class="talk">
+							<td class="time">11:50</td>
+<!--							<td>
+								<span class="talk-title">Quantum teleportation using active feed-forward between two Canary Islands</span><br />
+								<span class="talk-authors">Xiao-Song Ma, Thomas Herbst, Thomas Scheidl, Daqing Wang, Sebastian Kropatschek, William Naylor, Alexandra Mech, Bernhard Wittmann, Johannes Kofler, Elena Anisimova, Vadim Makarov, Thomas Jennewein, Rupert Ursin, and Anton Zeilinger</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_17.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<span class="slides">&nbsp;</span>
+								<div class="talk-abstract">
+									<p>Quantum teleportation is a quintessential prerequisite of many quantum information processing protocols. By using quantum teleportation, one can circumvent the no-cloning theorem and faithfully transfer unknown quantum states to a party whose location is even unknown over arbitrary distances. Quantum teleportation can also be used to create entanglement between formally completely independent particles (i.e. entanglement swapping). The subsequent application of entanglement swapping might be utilized in a future quantum repeater, where in addition to entanglement swapping, local operations are performed to purify the teleported entanglement.</p>
+									<p>Quantum repeaters will be of utmost importance in a future global quantum communication network, since they will allow overcoming photon loss exponentially depending on the link distance and hence enable quantum communication over arbitrary distances. The quantum channels in a future network will mostly consist of optical fibers, which are already widely installed. As an alternative, free-space connections will allow to quickly build up connections between parties with direct line-of-sight. Additionally, orbital free-space links, e.g. satellite-to-ground links or inter-satellite links, will allow the efficient global interconnection of regional quantum networks and of objects not having connection to the fiber network. In order to prove the feasibility of quantum teleportation under optical link attenuations that will arise in a future application scenario, the communication distance in teleportation needs to be extended.</p>
+									<p>Here we report the first long-distance quantum teleportation experiment with active feed-forward in real time. The experiment employed two optical links, quantum and classical, over 143 km free space between the two Canary Islands of La Palma and Tenerife. The real-life long-distance environment implied a number of challenges for the present teleportation experiment. They resulted most significantly in the necessity to cope with an extremely low signal-to-noise ratio when using standard techniques, indeed too low for performing a successful experiment. To enhance it to a level making the experiment possible at all, we employed for the first time a combination of various cutting-edge techniques. Furthermore, the severe environmental conditions imposed demanding requirements onto the whole long-distance teleportation setup: link attenuation fluctuations due to atmospheric turbulence, induced by the harsh meteorological situations including rapid temperature change, sand storms, rain, fog, strong wind and even snow.</p>
+									<p>Our work proofs the feasibility of ground-based free-space quantum teleportation. Our quantum teleportation setup was able to achieve coincidence production rates and fidelities to cope with the optical link attenuation resulting from various experimental and technical challenges, which will arise in a quantum transmission between a ground-based transmitter to a low-earth-orbiting (LEO) satellite receiver31. Actually, some demands in our experiment were even more challenging since in satellite communication the atmospheric distances to be overcome are certainly lower than the distance between Tenerife and La Palma. This experiment represents a crucial step toward future quantum networks in space, which require space to ground quantum communication. The technology implemented in our experiment thus certainly reached the required maturity both for satellite and for long-distance ground communication. We expect that many of the features implemented here will be key blocks for a new area of fascinating experiments.</p>
+								</div>
+							</td> -->
+							<td class="align-left" >
+								<span class="talk-title">Security proof of the unbalanced phase-encoded BB84 protocol</span><br />
+								<span class="talk-authors">Agnes Ferenczi, Varun Narasimhachar, and <span class="speaker">Norbert Lutkenhaus</span></span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_18.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/18.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-12/?doi=10.3930/ETHZ/AV-3fbaa32f-72bc-413e-a5ea-8e617601e4fb&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>In optical implementations of the phase-encoded BB84 protocol, the bit information is usually encoded in the phase of two consecutive photon pulses generated in a Mach-Zehnder interferometer. In the actual experimental realization, the loss in the arms of the Mach-Zehnder interferometer is not balanced, for example because only one arm contains a lossy phase modulator. Therefore, the amplitudes of the pulses is not balanced, and the structure of the signals and measurements no longer corresponds to the (balanced) ideal BB84 protocol. Hence, the BB84 security analysis no longer applies in this scenario.</p>
+									<p>We provide a security proof of the unbalanced phase-encoded BB84. The resulting key rate turns out to be lower than the key rate of the ideal BB84 protocol. Therefore, in order to guarantee security, the loss due to the phase modulator cannot be ignored.</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="time">12:15</td>
+							<td>
+								<span class="talk-title">Air to ground quantum key distribution</span><br />
+								<span class="talk-authors"><span class="speaker">Sebastian Nauerth</span>, Florian Moll, Markus Rau, Christian Fuchs, Joachim Horwath, and Harald Weinfurter</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_12.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<span class="slides">&nbsp;</span>
+								<div class="talk-abstract">
+									<p>The range of quantum key distribution (QKD) systems is known to be limited to a few hundreds of km due to the attenuation of the channel and the finite signal to noise ratio of available detectors. Satellite based systems, however, could provide efficient links for global scale QKD. While both classical satellite downlinks and long range terrestrial free-space QKD were shown successfully, a quantum key exchange with a rapidly moving platform is still missing. Here we report on the first experimental demonstration of a BB84 QKD transmission from an airplane at a speed of 290 km/h to ground. Our system uses attenuated laser pulses with a mean photon number of <span class="math">μ = 0.5</span> and polarization encoding. Over a distance of 20 km a stable link was achieved for 10 min yielding a sifted key rate of 145 bits/s with a quantum bit error rate (QBER) of 4.8 %.</p>
+								</div>
+							</td>
+						</tr>
+						<tr class="event">
+							<td class="time">12:40</td>
+							<td ><span class="talk-title">Conference photo</span> (Follow Charlie)<br /><span class="talk-title">Lunch</td>
+						</tr>
+						<tr class="event">
+							<td class="time">19:00</td>
+							<td>
+								<span class="talk-title">Conference Dinner</span><br />
+								<a href="http://2012.qcrypt.net/dinnervenue.html">Venue</a>: <em>Emerald Pavilion</em>, Siloso Beach, Sentosa Island
+							</td>
+						</tr>
+						<tr class="event">
+							<td class="time">20:30</td>
+							<td>
+								<span class="talk-title">After Dinner Talk</span><br />
+								<span class="speaker">Charles Bennett</span><br />
+								<a href="http://2012.qcrypt.net/dinnervenue.html">Venue</a>: <em>Emerald Pavilion</em>, Siloso Beach, Sentosa Island
+							</td>
+						</tr>
+						<tr class="event">
+							<td class="time">21:00</td>
+							<td>
+								<span class="talk-title"><a href="rump.html">Rump Session</a></span><br />
+								<span class="talk-authors">Chair: Valerio Scarani</span><br />
+								<a href="http://2012.qcrypt.net/dinnervenue.html">Venue</a>: <em>Emerald Pavilion</em>, Siloso Beach, Sentosa Island
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+				<!-- THURSDAY -->
+				
+				<h3 id="Thursday">Thursday (13th September)</h3>
+				 
+				<table class="program">
+					<tbody>
+						<tr>
+							<td class="time">09:00</td>
+							<td id="Juerg">
+								<span class="talk-title">Focus Tutorial: Cryptographic primitives </span><br />
+								<span class="talk-authors speaker">Juerg Wullschleger</span><br />
+								<span class="abstract-show-dummy">&nbsp;</span>
+<span class="extabstract2">&nbsp;</span>
+<a href="docs/slides/Juerg.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-13/?doi=10.3930/ETHZ/AV-30c195fb-9e61-47c4-b379-2589793d63dd&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+							</td>
+						</tr>
+						<tr class="event">
+							<td class="time">10:30</td>
+							<td><span class="talk-title">Coffee Break</span></td>
+						</tr>
+						<tr class="talk">
+							<td class="time">11:00</td>
+							<td>
+								<span class="talk-title">Complete insecurity of quantum protocols for classical two-party computation</span><br />
+								<span class="talk-authors">Harry Buhrman, Matthias Christandl, and <span class="speaker">Christian Schaffner</span></span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_16.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a class="download_choice" href="program.html#"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /><img src="images/keynote.png" alt="Keynote icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+			<div class="tooltip"><a href="docs/slides/16.pdf"><img src="images/pdf_l.png" alt="PDF" height="64" width="64" /></a> <a href="docs/slides/16.key"><img src="images/keynote_l.png" alt="Keynote" height="64" width="64" style="float: right;" /></a></div><a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-13/?doi=10.3930/ETHZ/AV-498aa51b-5d84-41bc-a0f2-a0eb1d470bb8&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>A fundamental task in modern cryptography is the joint computation of a function which has two inputs, one from Alice and one from Bob, such that neither of the two can learn more about the other's input than what is implied by the value of the function. In this work we show that any quantum protocol for the computation of a classical deterministic function that outputs the result to both parties (two-sided computation) and that is secure against a cheating Bob can be completely broken by a cheating Alice. Whereas it is known that quantum protocols for this task cannot be completely secure, our result implies that security for one party implies complete insecurity for the other. Our findings stand in stark contrast to recent protocols for weak coin tossing, and highlight the limits of cryptography within quantum mechanics. We remark that our conclusions remain valid, even if security is only required to be approximate.</p>
+								</div>
+							</td>
+						</tr>
+						<tr class="talk">
+							<td class="time">11:25</td>
+							<td>
+								<span class="talk-title">A min-entropy uncertainty relation for finite size cryptography</span><br />
+								<span class="talk-authors"><span class="speaker">Nelly Ng</span>, Mario Berta, and Stephanie Wehner</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_11.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/11.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-13/?doi=10.3930/ETHZ/AV-1b2200d6-2178-48b8-8845-ddcf6635b4af&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>Apart from their foundational signicance, entropic uncertainty relations play a central role in proving the security of quantum cryptographic protocols. Of particular interest are thereby relations in terms of the smooth min-entropy for BB84 and six-state encodings. Previously, strong uncertainty relations were obtained which are valid in the limit of large block lengths. Here, we prove a new uncertainty relation in terms of the smooth min-entropy that is only marginally less strong, but has the crucial property that it can be applied to rather small block lengths. This paves the way for a practical implementation of many cryptographic protocols. As part of our proof we show tight uncertainty relations for a family of Renyi entropies that may be of independent interest.</p>
+								</div>
+							</td>
+						</tr>
+						<tr class="talk">
+							<td class="time">11:50</td>
+							<td class="align-left" >
+								<span class="talk-title">Superposition attacks on cryptographic protocols</span><br />
+								<span class="talk-authors">Ivan Damgård, Jesper Buus Nielsen, <span class="speaker">Jakob Funder</span>, and Louis Salvail</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_61.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/61.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-13/?doi=10.3930/ETHZ/AV-645c70df-ba1d-4794-95f3-c983381992c5&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>Attacks on cryptographic protocols are usually modeled by allowing an adversary to ask queries to an oracle. Security is then defined by requiring that as long as the queries satisfy some constraint, there is some problem the adversary cannot solve, such as compute a certain piece of information. Even if the protocol is quantum, the queries are typically classical, such as a choice of subset of players to corrupt. In this paper, we introduce a fundamentally new model of quantum attacks on protocols, where the adversary is allowed to ask several classical queries in quantum superposition. This is a strictly stronger attack than the standard one, and we consider the security of several primitives in this model. We show that a secret-sharing scheme that is secure with threshold <span class="math">t</span> in the standard model is secure against superposition attacks if and only if the threshold is lowered to <span class="math">t/2</span>. This holds for all classical as well as a large class of quantum secret sharing schemes. We then consider zero-knowledge and first show that known protocols are not, in general, secure in our model by designing a superposition attack on the well-known zero-knowledge protocol for graph isomorphism. We then use our secret-sharing result to design zero-knowledge proofs for all of NP in the common reference string model. While our protocol is classical, it is sound against a cheating unbounded quantum prover and computational zero-knowledge even if the verifier is allowed a superposition attack. Finally, we consider multiparty computation and give a characterization of a class of protocols that can be shown secure, though not necessarily with efficient simulation. We show that this class contains non-trivial protocols that cannot be shown secure by running a classical simulator in superposition.</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="time">12:15</td>
+							<td>
+								<span class="talk-title">Quantum key distribution in the classical authenticated key exchange framework</span><br />
+								<span class="talk-authors">Michele Mosca, <span class="speaker">Douglas Stebila</span>, and Berkant Ustaoglu</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_59.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/59.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-13/?doi=10.3930/ETHZ/AV-fd55b903-ec62-4b27-b139-896600051f50&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>Key establishment is a crucial primitive for building secure channels: in a multi-party setting, it allows two parties using only public authenticated communication to establish a secret session key which can be used to encrypt messages. But if the session key is compromised, the confidentiality of encrypted messages is typically compromised as well. Without quantum mechanics, key establishment can only be done under the assumption that some computational problem is hard. Since digital communication can be easily eavesdropped and recorded, it is important to consider the secrecy of information anticipating future algorithmic and computational discoveries which could break the secrecy of past keys, violating the secrecy of the confidential channel.</p>
+									<p>Quantum key distribution (QKD) can be used generate secret keys that are secure against any future algorithmic or computational improvements. QKD protocols still require authentication of classical communication, however, which is most easily achieved using computationally secure digital signature schemes. It is generally considered folklore that QKD when used with computationally secure authentication is still secure against an unbounded adversary, provided the adversary did not break the authentication during the run of the protocol.</p>
+									<p>We describe a security model for quantum key distribution based on traditional classical authenticated key exchange (AKE) security models. Using our model, we characterize the long-term security of the BB84 QKD protocol with computationally secure authentication against an eventually unbounded adversary. By basing our model on traditional AKE models, we can more readily compare the relative merits of various forms of QKD and existing classical AKE protocols. This comparison illustrates in which types of adversarial environments different quantum and classical key agreement protocols can be secure.</p>
+								</div>
+							</td>
+						</tr>
+						<tr class="event">
+							<td class="time">12:40</td>
+							<td class="talk-title">Lunch</td>
+						</tr>
+						<tr class="talk">
+							<td class="time">14:00</td>
+							<td id="Toni">
+								<span class="talk-title">Invited Talk: Randomness and quantum non-locality</span><br />
+								<span class="talk-authors speaker">Toni Acin</span><br />
+								<span class="abstract-show-dummy">&nbsp;</span>
+<span class="extabstract2">&nbsp;</span>
+<a href="docs/slides/Toni.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-13/?doi=10.3930/ETHZ/AV-164b449f-6d6f-4e6d-ad32-dfae3ef946e5&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+							</td>
+						</tr>
+						<tr>
+							<td class="time">14:50</td>
+							<td>
+								<span class="talk-title">High speed quantum key distribution for Smart City distances with data multiplexing</span><br />
+								<span class="talk-authors"><span class="speaker">Iris Choi</span>, Ketaki Patel, James Dynes, Andrew Sharpe, Alexander Dixon, Zhiliang Yuan, Richard Penty, and Andrew Shields</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_10.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<span class="slides">&nbsp;</span>
+								<div class="talk-abstract">
+									<p>To maintain a sustainable urban development, many metropolitan areas have adopted the ‘Smart City’ model. It is a strategic concept where a city provides its inhabitants the availability of knowledge communication by means of Information and Communication Technologies (ICTs). As the Smart City model relies heavily on information transfer, information security is of utmost importance. Quantum Key Distribution (QKD) is an unique technology for providing encryption keys between remote parties with a directly quantifiable security; therefore it would be highly desirable to combine QKD with classical information transfer in a Smart community. QKD in the presence of classical data traffic has been demonstrated, however the secure key rates and transfer distances are far too low for broadband applications over Smart City distances (typically ranging from 30 km to 80 km). For example, a conferencing video would usually require 256 kbit/s secure key for one time pad encryption. The low quantum key transfer rate is primarily limited by the low single photon detection rate. With the novel self-differencing technique, GHz gating of the single photon detectors is possible, therefore allowing high speed quantum keys to be created for high bandwidth applications. Here in this paper, we present the first QKD system demonstration with sufficient secure key rate for one time pad encryption of video conferencing applications over metropolitan fibre distances. Secure keys in presence of error free classical data are demonstrated for distances up to 90 km. This demonstration is the first step towards enabling utmost secure data exchange for Smart City distances. We anticipate such demonstration will increase the level of confidence towards ICT infrastructures.</p>
+								</div>
+							</td>
+						</tr>
+						<tr class="event">
+							<td class="time">15:15</td>
+							<td class="talk-title">Coffee Break</td>
+						</tr>
+						<tr class="event">
+							<td class="time">16:00</td>
+							<td class="talk-title"><a href="industry.html">Industry Session</a></td>
+						</tr>
+					</tbody>
+				</table>
+
+				
+				<!-- FRIDAY -->
+				
+				<h3 id="Friday">Friday (14th September)</h3>
+				<table class="program">
+					<tbody>
+						<tr>
+							<td class="time">09:00</td>
+							<td id="Marco">
+								<span class="talk-title">Focus Tutorial: Smooth min/max entropies </span><br />
+								<span class="talk-authors speaker">Marco Tomamichel</span><br />
+								<span class="abstract-show-dummy">&nbsp;</span>
+<span class="extabstract2">&nbsp;</span>
+<a href="docs/slides/Marco.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-14/?doi=10.3930/ETHZ/AV-614aca96-64ee-46eb-81ad-cd8fdc255684&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+							</td>
+						</tr>
+						<tr class="event">
+							<td class="time">10:30</td>
+							<td class="talk-title">Coffee Break</td>
+						</tr>
+						<tr class="talk">
+							<td class="time">11:00</td>
+							<td id="Davin">
+								<span class="talk-title">Invited Talk: Quantum Steering: Experiments and Applications</span><br />
+								<span class="talk-authors speaker">Devin Smith</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<span class="extabstract2">&nbsp;</span>
+<a href="docs/slides/Davin.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-14/?doi=10.3930/ETHZ/AV-1781c437-c60a-4acd-889b-3f3c3ef2d7f2&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>Quantum steering allows two parties to verify shared entanglement even if one measurement device is untrusted, as well as convincing an unbelieving party of the existence of entanglement.  I will discuss quantum steering in the contexts of recent experiments [1,2,3] steering the polarization degree of freedom for single photons.  The historical context as well as modern motivation for steering will be covered, as well as the similarities and differences in the various recent experiments.</p>
+									<p>Our own work [1], demonstrating quantum steering with high efficiency (62%) in two measurement bases, will be discussed in detail, including the technical challenges in certifying the results due to measurement imperfections of various types.   We ultimately demonstrate a violation of some 48 standard deviations of the steering inequality most relevant to applications, which also happens to be the one most difficult to violate. The efficiency demonstrated in this experiment (62%) is half again as high as the previous world record for detection efficiency for an experiment in this context.</p>
+									<p>I will conclude with our current research project – to implement semi-device-independent quantum key distribution [4], with security guaranteed by a steering inequality.  This lies in the gap between current QKD implementations and the ultimate security given by device-independent QKD, and, in practical situations, requires a detection efficiency some 10% higher again than our previous result, which should be achievable given the advances made since that result was published.</p>
+									<p>1.  DH Smith, G Gillett et al., Nat. Commun. 3:625 (2012)<br />
+									   2.  AJ Bennet et al., Phys. Rev. X 2, 031003 (2012)<br />
+									   3.  B Wittmann, S Ramelow et al., New J. Phys. 14, 053030 (2012)<br />
+									   4. C Branciard et al., Phys. Rev. A 85, 010301(R) (2012)
+									</p>
+								</div>
+							</td>
+						</tr>
+						<tr class="talk">
+							<td class="time">11:50</td>
+							<td>
+								<span class="talk-title">Improving the maximum transmission distance of continuous-variable quantum key distribution using a noiseless amplifier</span><br />
+								<span class="talk-authors"><span class="speaker">Rémi Blandino</span>, Anthony Leverrier, Marco Barbieri, Jean Etesse, Philippe Grangier, and Rosa Tualle-Brouri</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_32.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/32.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-14/?doi=10.3930/ETHZ/AV-52282c2f-d803-4a16-b28b-abfa720cbdb1&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>We show that the maximum transmission distance of continuous-variable quantum key distribution in presence of a Gaussian noisy lossy channel can be arbitrarily increased using a heralded noiseless linear amplifier. We explicitly consider a protocol using amplitude and phase modulated coherent states with reverse reconciliation. Assuming that the secret key rate drops to zero for a line transmittance <span class="math">T</span><sub>lim</sub>, we find that a noiseless amplifier with amplitude gain <span class="math">g</span> can improve this value to <span class="math">T</span><sub>lim</sub>/<span class="math">g</span><sup>2</sup>, corresponding to an increase in distance proportional to log <span class="math">g</span>.</p>
+								</div>
+							</td>
+						</tr>
+						<tr style="background-color: #E89B8D; border-top: #C73C22 solid 1px; border-left: #C73C22 solid 1px; border-right: #C73C22 solid 1px;"><td colspan="2">Best student paper award, chosen by the Program Committee</td></tr>
+						<tr style="border-bottom: #C73C22 solid 1px; border-left: #C73C22 solid 1px; border-right: #C73C22 solid 1px;">
+							<td class="time">12:15<br /><br /><img src="images/medal.png" alt="medal" /></td>
+							<td>
+								<span class="talk-title">Experimental demonstration of continuous-variable quantum key distribution over 80 km of standard telecom fiber</span><br />
+								<span class="talk-authors"><span class="speaker">Paul Jouguet</span>, Sébastien Kunz-Jacques, Anthony Leverrier, Philippe Grangier, and Eleni Diamanti</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_34.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/34.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-14/?doi=10.3930/ETHZ/AV-c0823613-498a-479f-958f-1a41f3fed82c&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>We demonstrate for the first time that long-distance quantum key distribution can be achieved with continuous variables, using only standard telecommunication components. Furthermore, we obtain a positive secret key rate over long distances even when taking into account finite-size effects. These results correspond to a practical implementation guaranteeing the strongest level of security achievable with QKD and show that continuous-variable quantum key distribution is a technology of choice for near-future secure quantum communications.</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="time">12:40</td>
+							<td>
+								<span class="talk-title">Continuous variable quantum key distribution: finite-key analysis of composable security against coherent attacks</span><br />
+								<span class="talk-authors"><span class="speaker">Fabian Furrer</span>, Torsten Franz, Mario Berta, Volkher Scholz, Marco Tomamichel, and Reinhard Werner</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_47.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/47.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+<a href="http://www.multimedia.ethz.ch/conferences/2012/qcrypt/2012-09-14/?doi=10.3930/ETHZ/AV-7dcfb970-0cba-47d1-b333-90c3d81d9a48&autostart=false" class="video"><img src="images/video_icon.png" alt="Video icon" width="20" style="margin-bottom: -3px;" /> <span class="text">Video</span></a>
+								<div class="talk-abstract">
+									<p>We provide a security analysis for continuous variable quantum key distribution protocols based on the transmission of two-mode squeezed vacuum states measured via homodyne detection. We employ a version of the entropic uncertainty relation for smooth entropies to give a lower bound on the number of secret bits which can be extracted from a finite number of runs of the protocol. This bound is valid under general coherent attacks, and gives rise to keys which are composably secure. For comparison, we also give a lower bound valid under the assumption of collective attacks. For both scenarios, we find positive key rates using experimental parameters reachable today.</p>
+								</div>
+							</td>
+						</tr>
+
+						<tr class="event">
+							<td class="time">13:05</td>
+							<td class="talk-title">Lunch</td>
+						</tr>
+<!--						<tr class="event">
+							<td class="time">15:15</td>
+							<td class="talk-title">Coffee Break</td>
+						</tr>
+						<tr class="talk">
+							<td class="time">15:45</td>
+							<td>
+								<span class="talk-title">Security of continuous-variable quantum key distribution against general attacks</span><br />
+								<span class="talk-authors"><span class="speaker">Anthony Leverrier</span>, Raul Garcia-Patron, Renato Renner, and Nicolas Cerf</span><br />
+								<span class="abstract-show"><img src="images/abstract-down.png" alt="Arrow" class="imgabstract" height="10" width="10" /> <span class="text">Abstract</span></span>
+<a href="docs/extended-abstracts/qcrypt2012_submission_50.pdf" class="extabstract2"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Extended abstract</span></a>
+<a href="docs/slides/50.pdf" class="slides"><img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px;" /> <span class="text">Slides</span></a>
+								<div class="talk-abstract">
+									<p>We prove that Gaussian continuous-variable quantum key distribution protocols, using a Gaussian distribution of coherent or squeezed states and homodyne or heterodyne measurement, are secure against arbitrary attacks.</p>
+									<p>Our proof exploits the speciﬁc symmetries in phase-space of Gaussian QKD protocols to prove that once a simple test over the measurement outcomes succeeds, the global state shared between Alice and Bob is well decribed by assigning a low dimensional Hilbert space to each mode. Then one can use the postselection technique introduced by Christandl, Koenig and Renner for discrete-variable protocols to conclude.</p>
+									<p>Our result greatly improves over previous ones using either a de Finetti theorem or an entropic uncertainty principle which could not be applied to prove the security of protocols in realistic experimental implementations.</p>
+								</div>
+							</td>
+						</tr>-->
+					</tbody>
+				</table>
+
+
+				<h3 id="posters">Posters</h3>
+
+
+<ul class="contributed">
+<li><span class="talk-title">A Decoupling Approach to the Holevo-Schumacher-Westmoreland Theorem</span><br />
+<span class="talk-authors">Frédéric Dupuis, Oleg Szehr and Marco Tomamichel</span></li>
+<li><span class="talk-title">A high speed quantum random number generator based on the quantum fluctuations of the vacuum</span><br />
+<span class="talk-authors">Thomas Symul, Syed Assad and Ping Koy Lam</span></li>
+<li><span class="talk-title">A Protocol of the Quantum Relay using Quantum Group Secret Sharing</span><br />
+<span class="talk-authors">Takashi Suzuki, Akihisa Tomita and Atsushi Okamoto</span></li>
+<li><span class="talk-title">Adversarial multipartite entanglement verification in realistic conditions</span><br />
+<span class="talk-authors">Anna Pappa, André Chailloux, Thomas Lawson and Stephanie Wehner</span></li>
+<li><span class="talk-title">Alternative Schemes for Measurement-Device-Independent Quantum Key Distribution</span><br />
+<span class="talk-authors">Xiongfeng Ma and Mohsen Razavi</span></li>
+<li><span class="talk-title">Ancilla-Driven Universal Blind Quantum Computation</span><br />
+<span class="talk-authors">Takahiro Sueki, Takeshi Koshiba and Tomoyuki Morimae</span></li>
+<li><span class="talk-title">Balanced homodyne detection as a coherent mode selector for quantum communications in WDM environment</span><br />
+<span class="talk-authors">Rupesh Kumar, Hao Qin and Romain Alléaume</span></li>
+<li><span class="talk-title">Breaking up the quantum detector control attack</span><br />
+<span class="talk-authors">Luis A. Lizama-Perez, J. Mauricio Lopez, Eduardo De Carlos Lopez and Salvador E. Venegas-Andraca</span></li>
+<li><span class="talk-title">Characterization of Min-Entropy Using Physical Constraints - Compatibility between Quantum Steering and the No-Signaling</span><br />
+<span class="talk-authors">Joonwoo Bae</span></li>
+<li><span class="talk-title">Concise and Tight Security Analysis of the Bennett-Brassard 1984 Protocol with Finite Key Lengths</span><br />
+<span class="talk-authors">Masahito Hayashi and Toyohiro Tsurumaru</span></li>
+<li><span class="talk-title">Continuous-Variable QKD with Discrete Modulations and Post-Selections</span><br />
+<span class="talk-authors">Tsubasa Ichikawa, Yoshifumi Koike, Kazuhiro Murayama and Takuya Hirano</span></li>
+<li><span class="talk-title">Countermeasure against tailored bright illumination attack for DPS-QKD</span><br />
+<span class="talk-authors">T. Honjo, M. Fujiwara, K.Shimizu, K. Tamaki, S. Miki and T. Yam</span></li>
+<li><span class="talk-title">Device Independent Quantum Key Distribution with Reused Devices</span><br />
+<span class="talk-authors">Matthew McKague and Lana Sheridan</span></li>
+<li><span class="talk-title">Dynamics of an entangled coherent state over an amplitude damping channel</span><br />
+<span class="talk-authors">Abderrahim El Allati and Yassine Hassouni</span></li>
+<li><span class="talk-title">Efficient QKD Postprocessing Algorithms</span><br />
+<span class="talk-authors">Christoph Pacher, Gottfried Lechner, Christopher Portmann, Oliver Maurhart and Momtchil Peev</span></li>
+<li><span class="talk-title">Enhanced Private Communication with Concatenated Quantum Polar Codes </span><br />
+<span class="talk-authors">Laszlo Gyongyosi and Sandor Imre</span></li>
+<li><span class="talk-title">Entanglement-based quantum key distribution with the efficient BB84 over two 8-km free-space channels</span><br />
+<span class="talk-authors">Yuan Cao, Hao Liang, Juan Yin, Hai-Lin Yong, Fei Zhou and Yu-Pi</span></li>
+<li><span class="talk-title">Estimation of phase errors without the Gaussian approximation and improvement of the secure key rate of BB84 protocol</span><br />
+<span class="talk-authors">Kenta Sakakibara, Ryutaroh Matsumoto and Tomohiko Uyematsu</span></li>
+<li><span class="talk-title">Experimental demonstration of quantum private queries in a real-world environment</span><br />
+<span class="talk-authors">Philip Chan, Itzel Lucio-Martinez, Xiaofan Mo, Christoph Simon and  Wolfgang Tittel</span></li>
+<li><span class="talk-title">Extremely-weak avalanche discrimination for gated avalanche photodiode</span><br />
+<span class="talk-authors">Abdessattar Bouzid, Min-Soo Lee, Min Ki Woo, Il Young Kim, Sang-Wook Han and Sung Moon</span></li>
+<li><span class="talk-title">Fast real-time random numbers from vacuum fluctuations</span><br />
+<span class="talk-authors">T. Symul, S. M. Assad and P. K. Lam</span></li>
+<li><span class="talk-title">Fine-grained lower limit of quantum uncertainty in the presence of quantum memory</span><br />
+<span class="talk-authors">Tanumoy Pramanik, Priyanka Chowdhury and Archan Majumdr</span></li>
+<li><span class="talk-title">Finite-key security analysis of a simple and efficient one-way quantum cryptography system</span><br />
+<span class="talk-authors">Charles Ci Wen Lim, Nino Walenta and Hugo Zbinden</span></li>
+<li><span class="talk-title">Four-Wave Mixing: Photon Statistics and the Impact on a Co-Propagating Quantum Signal</span><br />
+<span class="talk-authors">Álvaro Almeida, Nuno Silva, Paulo André and Armando Pinto</span></li>
+<li><span class="talk-title">Free Space Quantum Communication using Continuous Polarization Variables</span><br />
+<span class="talk-authors">Bettina Heim, Christian Peuntinger, Christoffer Wittmann, Christoph Marquardt and Gerd Leuchs</span></li>
+<li><span class="talk-title">Gigahertz quantum key distribution over 260 km of standard telecom fiber</span><br />
+<span class="talk-authors">Shuang Wang, Jing-Zheng Huang, Wei Chen, Jun-Fu Guo and Zhen-Qi</span></li>
+<li><span class="talk-title">Gigahertz-Clocked Single-Photon Detector with Tunable Gate-Frequency</span><br />
+<span class="talk-authors">Y. Zhang, T. S. Yu, M. T. Liu and H. C. Lim</span></li>
+<li><span class="talk-title">Hardy's paradox in a device-independent scenario</span><br />
+<span class="talk-authors">Law Yun Zhi, Rafael Rabelo and Valerio Scarani</span></li>
+<li><span class="talk-title">Hefei Metropolitan Quantum Communication Network 2011</span><br />
+<span class="talk-authors">Tengyun Chen, Xiao Jiang, Lei Zhou, Shibiao Tang, Bo Zhao, Jian Wang, Lei Ju, Luokan Chen, Hongfei Zhang, Ke Cui, Yang Liu, Liujun Wang, Qing Chen, Sibo Feng, Yong Zhao, Chengzhi Peng, Zengbing Chen and Jianwei Pan</span></li>
+<li><span class="talk-title">Implementation of extractors and privacy amplification</span><br />
+<span class="talk-authors">Zhen Zhang, Myung Gi Lee and Xiongfeng Ma</span></li>
+<li><span class="talk-title">Improved Reconciliation Efficiency with Channel Coding for Quantum Key Distribution</span><br />
+<span class="talk-authors">Patcharapong Treeviriyanupab, Paramin Sangwongngam and Keattisak Sripimanwat</span></li>
+<li><span class="talk-title">Improving the Performance of Continuous-Variable Quantum Key Distribution: Study of Practical Imperfections and High-Performance Reconciliation</span><br />
+<span class="talk-authors">Paul Jouguet, Sebastien Kunz-Jacques, Anthony Leverrier and Eleni Diamanti</span></li>
+<li><span class="talk-title">Local simulation of singlet statistics for restricted set of measurement</span><br />
+<span class="talk-authors">Ashutosh Rai, MD. Rajjak Gazi, Manik Banik and Subhadipa Das</span></li>
+<li><span class="talk-title">More Efficient Implementations of CASCADE</span><br />
+<span class="talk-authors">Mustafa Toyran and Thomas B. Pedersen</span></li>
+<li><span class="talk-title">Multiplexing QKD systems in Conventional Optical Networks</span><br />
+<span class="talk-authors">A. Ciurana, V. Martin, J. Martínez-Mateo, A. Poppe, M. Soto, N. Walenta and H. Zbinden</span></li>
+<li><span class="talk-title">Multisetting Bell inequalities for N spins-1 avoiding KS contradiction</span><br />
+<span class="talk-authors">Arijit Dutta, Marcin Wieśniak and Marek Żukowski</span></li>
+<li><span class="talk-title">Near Real-Time Prediction of the optimal pair production rate for entanglement-based QKD</span><br />
+<span class="talk-authors">Catherine Holloway, John Doucette, Jean-Philippe Bourgoin, Christopher Erven and Thomas Jennewein</span></li>
+<li><span class="talk-title">On the Mathematical Limits of Quantum Communication over Superactivated Quantum Channels</span><br />
+<span class="talk-authors">Laszlo Gyongyosi and Sandor Imre</span></li>
+<li><span class="talk-title">Passive decoy state source for quantum key distribution</span><br />
+<span class="talk-authors">Fei Zhou, Hai-Ling Yong, Yuan Cao, Juan Yin and Ji-Gang Ren</span></li>
+<li><span class="talk-title">Polaractivation of Private Classical Capacity of Non-Private Quantum Channels</span><br />
+<span class="talk-authors">Laszlo Gyongyosi and Sandor Imre</span></li>
+<li><span class="talk-title">Polarization Shift Keying for free space QKD : effect of noise on reliability of the QKD protocols</span><br />
+<span class="talk-authors">Ram Soorat and Ashok Vudayagiri</span></li>
+<li><span class="talk-title">Precise evaluation of leaked information with universal2 privacy amplification in the presence of quantum attacker</span><br />
+<span class="talk-authors">Masahito Hayashi</span></li>
+<li><span class="talk-title">Private Communication over Quantum Relay Channels Using Quantum Polar Codes and Superactivation-assistance</span><br />
+<span class="talk-authors">Laszlo Gyongyosi and Sandor Imre</span></li>
+<li><span class="talk-title">QKD software architecture and system integration with classical communication infrastructure</span><br />
+<span class="talk-authors">Oliver Maurhart, Christoph Pacher, Andreas Happe, Thomas Lorunser, Cristina Tamas, Andreas Poppe and Momtchil Peev</span></li>
+<li><span class="talk-title">Quantum repeaters and quantum key distribution: the impact of entanglement distillation on the secret key rate</span><br />
+<span class="talk-authors">Sylvia Bratzik, Silvestre Abruzzo, Hermann Kampermann and Dagmar Bruß</span></li>
+<li><span class="talk-title">Quantum security analysis via smoothing of Renyi entropy of order 2</span><br />
+<span class="talk-authors">Masahito Hayashi</span></li>
+<li><span class="talk-title">Quantum wiretap channel with non-uniform random number</span><br />
+<span class="talk-authors">Masahito Hayashi</span></li>
+<li><span class="talk-title">Robust Self Testing Pure Entangled States</span><br />
+<span class="talk-authors">Matthew McKague, Tzyh Haur Yang and Valerio Scarani</span></li>
+<li><span class="talk-title">Second generation, miniaturized, low noise 1550nm single photon detector </span><br />
+<span class="talk-authors">Gerhard Humer and Momtchil Peev</span></li>
+<li><span class="talk-title">Security of distributed-phase-reference quantum key distribution</span><br />
+<span class="talk-authors">Tobias Moroder, Marcos Curty, Charles Ci Wen Lim, Le Phuc Thinh, Hugo Zbinden and Nicolas Gisin</span></li>
+<li><span class="talk-title">Security proof of the unbalanced phase-encoded BB84 protocol </span><br />
+<span class="talk-authors">Agnes Ferenczi, Varun Narasimhachar and Norbert Lutkenhaus</span></li>
+<li><span class="talk-title">Security proof of two-way quantum key distribution protocols with partial device independence</span><br />
+<span class="talk-authors">Normand Beaudry, Marco Lucamarini, Stefano Mancini and Renato Renner</span></li>
+<li><span class="talk-title">Semi-device-independent QKD based on BB84 and a CHSH-type estimation</span><br />
+<span class="talk-authors">Erik Woodhead, Charles Ci Wen Lim and Stefano Pironio</span></li>
+<li><span class="talk-title">Sharing quantum and classical secret</span><br />
+<span class="talk-authors">Anne Marin and Damian Markham</span></li>
+<li><span class="talk-title">Spin Entanglement and Non-locality of Multifermion Systems. Nontransitivity of Spin Entanglement.</span><br />
+<span class="talk-authors">Marsel Arifullin and Vitaly Berdinskiy</span></li>
+<li><span class="talk-title">Technological developments towards a Canadian quantum encryption and science satellite - QEYSSAT</span><br />
+<span class="talk-authors">Jean-Philippe Bourgoin, Brendon Higgins, Nikolay Gigov, Evan Meyer-Scott, Zhizhong Yan, Thomas Jennewein, Jean-François Lavigne, Vincent Roy, Pascal Deladurantaye and André Fougères</span></li>
+<li><span class="talk-title">The effects of reduced "free will" on Bell-based randomness expansion</span><br />
+<span class="talk-authors">Le Phuc Thinh, Dax Enshan Koh, Michael J.W. Hall, Setiawan, James E. Pope, Chiara Marletto, Alastair Kay, Valerio Scarani and Artur Ekert</span></li>
+<li><span class="talk-title">The link between entropic uncertainty and non-locality</span><br />
+<span class="talk-authors">Marco Tomamichel and Esther Haenggi</span></li>
+<li><span class="talk-title">The positive effect of imperfect intensity modulator on the practical security of quantum key distribution system</span><br />
+<span class="talk-authors">Jing-Zheng Huang, Shuang Wang, Hong-Wei Li and Zheng-Fu Han</span></li>
+<li><span class="talk-title">Timing synchronization with photon pairs for QKD</span><br />
+<span class="talk-authors">Thomas Lorünser, Andreas Happe, Momtchil Peev, Florian Hipp, Damian Melniczuk, Pattama Cummon and Andreas Poppe</span></li>
+<li><span class="talk-title">Towards Wrocław Quantum Network – industrial telecom testing and deployment of quantum cryptographic systems in a metropolitan network</span><br />
+<span class="talk-authors">M. Jacak, M. Donderowicz, J. Jacak, W. Donderowicz, J. Gruber, I. Jóźwiak, L. Jacak and W. Jacak</span></li>
+<li><span class="talk-title">Two-Frequency Hong-Ou-Mandel Interference: Experimental Proposal</span><br />
+<span class="talk-authors">M. T. Liu and H. C. Lim</span></li>
+</ul>
+<div style="border: #C73C22 solid 1px;">
+<div style="background-color: #E89B8D; padding: 2px">Best poster award, chosen by popular vote</div>
+<div style="padding: 5px;">
+<img src="images/medal.png" alt="medal" style="float: left; margin-right: 10px;"/><span class="talk-title">Uncertainty relations from simple entropic properties</span><br />
+<span class="talk-authors">Patrick Coles, Roger Colbeck, Li Yu and Michael Zwolak</span>
+<div style="clear: both;"></div>
+</div>
+</div>
+<ul class="contributed">
+<li><span class="talk-title">Unconditional security of Gaussian post-selected continuous variable quantum key distribution</span><br />
+<span class="talk-authors">N. Walk, T. Symul, P. K. Lam and T. C. Ralph</span></li>
+<li><span class="talk-title">Unconditionally secure communication protocol based on superdense coding – development of non-local entanglement based quantum communication concepts</span><br />
+<span class="talk-authors">M. Jacak, W. Donderowicz, J. Jacak, J. Gruber, I. Jóźwiak, L. Jacak and W. Jacak</span></li>
+
+</ul>
+				
+				
+
+
+				<p style="text-align: right;"><img height="269" width="226" src="images/sheepSmall.png" alt="QCrypt 2012 Mascot – Entangled Noodles Sheep" /></p>
+
+			</div><!-- end Content-->
+		</div><!-- end Container-->
+	</div><!-- end Wrap-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1184479-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body></html>

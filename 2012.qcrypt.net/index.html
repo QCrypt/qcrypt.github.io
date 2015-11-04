@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8" />
+	<title>QCRYPT 2012 – 2nd Conference on Quantum Cryptography</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+	<link href="jquery.lightbox-0.5.css" rel="stylesheet" type="text/css" />
+	<script src="common.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<script src="jquery.lightbox-0.5.pack.js" type="text/javascript"></script>
+	<script src="jqFancyTransitions.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	(function($){
+  $.fn.shuffle = function() {
+    return this.each(function(){
+      var items = $(this).children();
+      return (items.length)
+        ? $(this).html($.shuffle(items))
+        : this;
+    });
+  }
+   
+  $.shuffle = function(arr) {
+    for(
+      var j, x, i = arr.length; i;
+      j = parseInt(Math.random() * i),
+      x = arr[--i], arr[i] = arr[j], arr[j] = x
+    );
+    return arr;
+  }
+})(jQuery);
+
+		$(document).ready(function() {
+			$('a.lightbox').lightBox();
+			$('#sheeping').shuffle().jqFancyTransitions({ width: 189, height: 189 });
+		});
+	</script>
+	
+	<script type="text/javascript"> 
+		function showsuccess(){
+			var status = gup("status");
+			if (status == "1") {
+				document.getElementById('success').style.display = "block";
+			}
+		}
+	</script>
+	<style type="text/css">
+	#physdept {display: block; width: 300px; margin: auto; margin-bottom: 10px; }
+	#physdept, #physdept:hover, #physdept:active, #physdept:link, #physdept:visited {color: #063696; text-decoration: none;}
+	.andAlso:link, .andAlso:visited, .andAlso:active, .andAlso:hover {color: black;}
+	.andAlso:hover p{background-color: #ddd;}
+	.right:hover p:hover { 
+  		background-image: -webkit-linear-gradient(left, #ddd, #fff);
+		background-image:    -moz-linear-gradient(left, #ddd, #fff); /* For Fx 3.6 to Fx 15 */
+		background-image:     -ms-linear-gradient(left, #ddd, #fff); /* For IE 10 Platform Previews and Consumer Preview */
+		background-image:      -o-linear-gradient(left, #ddd, #fff); /* For Opera 11.1 to 12.0 */
+		background-image:  linear-gradient(to right, #ddd, #fff);
+	}
+	.left:hover p:hover { 
+  		background-image: -webkit-linear-gradient(right, #ddd, #fff);
+		background-image:    -moz-linear-gradient(right, #ddd, #fff); /* For Fx 3.6 to Fx 15 */
+		background-image:     -ms-linear-gradient(right, #ddd, #fff); /* For IE 10 Platform Previews and Consumer Preview */
+		background-image:      -o-linear-gradient(right, #ddd, #fff); /* For Opera 11.1 to 12.0 */
+		background-image:  linear-gradient(to left, #ddd, #fff);
+	}
+	</style>
+</head>
+<body onLoad="showsuccess()">
+<div style="width: 100%; background-color: #eee; background-image: linear-gradient( to bottom, #eee, #bbb); margin: 0; padding: 5px; box-shadow: 0px 10px 5px #888; position: relative; z-index: 99;"><p style="text-align: center; margin: 0; padding: 0;">This is the archived site of the 2012 edition of QCrypt. <a href="http://www.qcrypt.net"'>Next conference</a></p></div>
+	<div id="wrap">
+		<h1 id="banner"><a href="index.html"><img src="images/banner.jpg" width="720" height="120" alt="QCRYPT 2012 – 2nd Annual Conference on Quantum Cryptography" /></a></h1>
+
+		<div id="container">
+			<div id="menu">
+				<nav><ul>
+					<li class="we-are-here">Information</li>
+					<li><a href="committees.html">Committees</a></li>
+					<li><a href="program.html">Scientific Program</a></li>
+					<li><a href="rump.html">Rump Session</a></li>
+					<li><a href="industry.html">Industry Session</a></li>
+					<li><a href="submit.html">Submissions</a></li>
+					<li><a href="registration.html">Registration</a></li>
+					<li><a href="student-support.html">Student Support</a></li>
+					<li><a href="location.html">Conference Venue</a></li>
+					<li><a href="http://2012.qcrypt.net/dinnervenue.html">Dinner Venue</a></li>
+					<li><a href="accom.html">Accommodation</a></li>
+					<li><a href="traveltips.html">Travel Tips</a></li>
+					<li><a href="pictures.html">Pictures</a></li>					
+					<li><a href="charter.html">QCRYPT Charter</a></li>
+				</ul></nav>
+				
+	</div>
+
+		
+		
+			<div id="content" style="float: right;">
+				<h2 class="header">September 10th – 14th, 2012, Singapore</h2>
+				<p>Quantum cryptography aims to achieve security from fundamental physical principles, such as the quantum mechanical phenomena of entanglement and Heisenberg's uncertainty principle. In the last few years significant progress has been made in the theoretical understanding of quantum cryptography and its technological feasibility has been demonstrated experimentally. Quantum cryptography is therefore regarded as one of the most promising candidates for a future quantum technology.</p>
+				
+				<img src="images/Farewell.png" alt="Farewell message" height="565" style="margin-left: -10px;" />
+				<!--<p>QCRYPT is a new conference series on Quantum Cryptography. The <a href="http://www.qcrypt2011.ethz.ch">first event</a> took place at ETH Zurich September 2011, and was a resounding success with nearly 140 participants both from theoretical and experimental research groups, making it the largest conference in this area. The second event will take place at the National University of Singapore.</p>
+
+
+				 <h3>And also…</h3>
+			
+				<a href="http://www.quantumlah.org/main/publicevents.php" class="andAlso left"><p style="padding: 10px 5px 10px 0; width: 230px; float: left; border-right: #c93131 dotted 1px; text-align: left; height: 120px;"><strong>Public lecture: “Rise of the quantum age” by Gilles Brassard</strong><br/>
+				In conjunction with the CQT, Gilles Brassard will give a public lecture “Rise of the quantum age” in the unSPEAKABLE series, tuesday september 11th, 6:30pm.
+				</p></a> -->
+
+				<p><strong>Satellite workshop</strong><br />
+				Japan-Singapore Workshop on multi-user quantum networks, 17th-20th September 2012, CQT Singapore, organized by Masahito Hayashi and Andreas Winter. <a href="http://www.quantumlah.org/JSW2012">More info.</a></p>
+				
+
+
+				<h3 style="clear: both;">Keep in touch</h3>
+				<p>Stay tuned for news about next year's conference by signing up for the newsletter!</p>
+				<p style="text-align: center;">
+				<form method="post" action="http://2012.qcrypt.net/signup.php"  style="text-align: center;">
+					<div id="success" style="display: none; font-size:10px; font-color: red; font-weight: bold;">
+						Your email has been added to our mailing list!
+					</div>	
+					Email: <input type="text" id="email" name="email" />
+					<input type="submit" value="Sign up!" />
+				</form>
+
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0];
+					  if (d.getElementById(id)) return;
+					  js = d.createElement(s); js.id = id;
+					  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					  fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));
+				</script>
+				<div style="width: 476px; height: 65px; border: solid 1px #aaa; margin-top: 30px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px;">
+					<div class="fb-like-box" data-href="https://www.facebook.com/pages/QCrypt-Conference-on-Quantum-Cryptography/166412400066974" data-width="480" data-height="64" data-show-faces="false" data-stream="false" data-header="false"></div>
+				</div>
+				
+				<h3>Posters</h3>
+				<p style="text-align: center;">
+					<span style="float: left;"><a href="images/poster-recto-large.png" class="lightbox"><img src="images/poster-recto.png" alt="Poster Recto" height="160" width="113" class="poster" /></a>
+					<a href="images/poster-verso-large.png" class="lightbox"><img src="images/poster-verso.png" alt="Poster Verso" height="160" width="113" class="poster" /></a>
+					<br /><a href="docs/poster.pdf">Download the poster <img src="images/pdf.png" alt="PDF icon" height="20" width="20" style="margin-bottom: -6px" /></a>
+					</span>
+					<a href="images/poster_rise_large.png"  class="lightbox"><img src="images/poster_rise.png"  alt="Poster Rise of the quantum age" height="160" width="113" class="poster"/></a><br />
+					<a href="images/poster_Rise_of_the_Quantum_Age.jpg">Download the poster <img src="images/jpg.png" alt="PNG icon" height="20" width="20" style="margin-bottom: -6px;"></a>
+				</p>
+		
+				<h3>Sponsors</h3>
+				<a href="http://physics.nus.edu.sg/" id="physdept"><table><tr><td style="padding-right: 10px;"><img alt="" src="images/nuslogo.png" height="50" /></td><td style="border-left: solid 1px #063696; padding-left: 10px;">Department of Physics</td></tr></table></a>
+				<ul id="sponsors">
+					<li><a href="http://www.quantumlah.org/"><img alt="" src="images/CQTLogo-sponsor.png" height="40" /></a></li>
+ 					<li><a href="http://www.iqc.org/"><img alt="" src="images/IQCLogo-sponsor.png" height="40" /></a></li>
+					<li><a href="http://www.dso.org.sg"><img alt="" src="images/dso3.png" height="80" /></a></li>
+					<li><a href="http://www.swissnex.org"><img alt="" src="images/swissnexLogo-sponsor.png" height="55" /></a></li>
+					<li><a href="http://www.idquantique.com"><img alt="" src="images/idq-sponsor.png" height="50" /></a></li>
+					<li><a href="http://www.scontel.ru"><img alt="" src="images/scontel-sponsor.png" height="60" /></a></li>
+					<li><a href="http://www.acexon.com/"><img alt="" src="images/AcexonLogo-sponsor.png" height="65" /></a></li>
+					<li><a href="http://www.azoquantum.com/"><img alt="" src="images/AZoQuantum-sponsor.png" height="50" /></a></li>
+					<li><a href="http://www.ait.ac.at/"><img src="images/AITlogo-sponsor.png" height="50" alt="" /></a></li>
+					<li><a href="http://www.singlequantum.com/"><img alt="" src="images/SingleQuantum-sponsor.png" height="50" /></a></li>
+				</ul>
+		
+				
+				<p style="text-align: right;"><img height="269" width="226" src="images/sheepSmall.png" alt="QCrypt 2012 Mascot – Entangled Noodles Sheep" /></p>
+		
+			</div><!-- end Content-->
+			
+
+			
+		</div><!-- end Container-->
+	</div><!-- end Wrap-->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1184479-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body></html>

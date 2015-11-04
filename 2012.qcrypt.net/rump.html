@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8" />
+	<title>QCRYPT 2012 - Rump Session</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+	<link href="jquery-ui-1.8.23.custom.css" rel="stylesheet" type="text/css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<script src="jquery-ui-1.8.23.custom.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(function() {
+		var availableTags = ["Aarthi Meenakshi Sundaram", "Abderrahim El Allati", "Adrian Kent", "Alex Monras", "Alexander Korneev", "Álvaro Almeida", "Andreas Poppe", "Andreas Winter", "Anthony Leverrier", "Arijit Dutta", "Artur Ekert", "Ashutosh Rai", "Attila Pereszlenyi", "Bettina Heim", "Bill Rosgen", "Brendon Higgins", "Catherine Holloway", "Chang Suk Noh", "Changhyoup  Lee", "Charles Bennett", "Charles Ci Wen Lim", "Chengjie Zhang", "Christian Schaffner", "Christoph Pacher", "Ciara Morgan", "Corsin Pfister", "Darwin Gosal", "Debashis De Munshi", "Devin Smith", "Douglas Hodson", "Douglas Stebila", "Eleni Diamanti", "Elnur Hajiyev", "Erik Thoreson", "Fabian Furrer", "Frédéric Dupuis", "Gilles Brassard", "Gladia Hotan", "Gregoire Ribordy", "Gregor Weihs", "Guangqiang He", "Han Chuen Lim", "Hartmut Klauck", "Hugo Cable", "Hugo Zbinden", "Hwee Li Thio", "Iris Choi", "Jakob Funder", "Janusz Jacak", "Jed Kaniewski", "Jeffrey Morris", "Jenny Hogan", "Jian-Wei Pan", "Jiangwei Shang", "Jibo Dai", "Jing-Zheng Huang", "Jon Sjogren", "Joonwoo Bae", "Joshua Slater", "Juerg Wullschleger", "Julien Degorre", "Karol Jalochowski", "Ke Li", "Kenta Sakakibara", "Lana Sheridan", "Laszlo Gyongyosi", "Lee Oesterling", "Lee Chin Heng", "Li Yu", "Loïck Magnin", "Luis A. Lizama Pérez", "Manas Kumar Patra", "Maotong Liu", "Marco Tomamichel", "Mario Berta", "Markus Grassl", "Marsel Arifullin", "Masahide Sasaki", "Masahito Hayashi", "Matthew McKague", "Matthias Christandl", "Meisheng Zhao", "Mhlambululi Mafu", "Michael Grimaila", "Miklos Santha", "Ming Gao", "Name Mae", "Nelly Ng", "Nino Walenta", "Norbert Lütkenhaus", "Normand Beaudry", "Nuala Timoney", "Oleg Szehr", "PARAMIN SANGWONGNGAM", "Patrick Hayden", "Paul Christiano", "Paul Jouguet", "PENGHUI YAO", "Phuc Thinh Le", "Pramod Mysore Srinivas", "Rafael Rabelo", "Raghav Kulkarni", "Remi Blandino", "Roger Colbeck", "Rohit Ramakrishnan", "Romain Alléaume", "Ruilian Li", "Rupesh  Kumar", "Ryutaroh Matsumoto", "Sambit Pal", "Sarvagya Upadhyay", "Sebastian Nauerth", "Shibiao Tang", "Shuang Wang", "Shun Watanabe", "Sinthunon Chavanaves", "Stephanie Wehner", "Su-Yong Lee", "SUNG MOON", "Supartha Podder", "SWARUP DAS", "Sylvia Bratzik", "Takahiro Sueki", "Takashi Suzuki", "Takeshi Koshiba", "Tang Zhongkan Kamiyuki", "Tanumoy  Pramanik", "Tanvirul Islam", "Tarun Dutta", "Thomas Symul", "Thomas Vidick", "Thomas Brochmann Pedersen", "Tobias Eberle", "Toni Acin", "Toshimori Honjo", "Toyohiro Tsurumaru", "Troy Lee", "Tsubasa Ichikawa", "Tzyh Haur Yang", "Ueli Maurer", "Umer Zubairy", "Valerio Scarani", "Ved Prakash", "VICENTE MARTIN AYUSO", "Vitus Händchen", "Volkher Scholz", "Wei Nie", "Wenhan Wang", "Wojciech Donderowicz", "Wolfgang Tittel", "XIKUN LI ", "Xiongfeng Ma", "Yinghua Zhang", "Yixin Zhang", "YONG SIAH TEO", "Yoshifumi Koike", "YoungJun Kim", "Yu Cai", "Yuan Cao", "Yue Chuan Tan", "zahra  shadman", "Zeng Guihua", "Zeynep Nilhan GURKAN", "Zhang Zhen", ];
+		$( "#rump-name" ).autocomplete({
+			source: availableTags, 
+			delay: 0,
+			minLength: 0
+		});
+	});
+	
+	$(document).ready( function() {
+		$("#rumpsubmimissiondform").submit( function() {
+			if ($.trim($("#rump-name").val()) == "") {
+				alert("Hey, it seems you did not provide your name!");
+				return false;
+			}
+			if ($.trim($("#rump-title").val()) == "") {
+				alert("You must provide a title for your talk");
+				return false;
+			}
+			if (!$("input[@name='rump-type']:checked").val()) {
+				alert("You must specify what type or talk you plan to do");
+				return false;
+			}
+		});
+	});
+</script>
+	<style type="text/css">
+		fieldset {border: solid 1px #FEE6CE;}
+		input {border: solid 1px #666;}
+		input:hover, input:focus, input:active  {border: solid 1px #FEC48F;}
+		select  {border: solid 1px #666;}
+		select:hover, select:focus, select:active  {border: solid 1px #FEC48F;}
+		#submit {display: block; border: outset 3px #FEC48F; width: 100%; height: 30px; background-color: #FEE6CE; margin: 20px 0;}
+		#submit:hover, #submit:active, #submit:focus {background-color: #FEC48F;}
+		input[type=text], input[type=file] {width: 400px;}
+		input[type=radio] {width: 20px; text-align: left;}
+		textarea {width: 400px; height: 150px; display: block;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1 id="banner"><a href="http://www.qcrypt.net/"><img src="images/banner.jpg"  height="120" width="720" alt="QCRYPT 2012 – 2nd Annual Conference on Quantum Cryptography" /></a></h1>
+
+		<div id="container">
+			<div id="menu">
+				<nav><ul>
+					<li><a href="index.html">Information</a></li>
+					<li><a href="committees.html">Committees</a></li>
+					<li><a href="program.html">Scientific Program</a></li>
+					<li class="we-are-here">Rump Session</li>
+					<li><a href="industry.html">Industry Session</a></li>
+					<li><a href="submit.html">Submissions</a></li>
+					<li><a href="registration.html">Registration</a></li>
+					<li><a href="student-support.html">Student Support</a></li>
+					<li><a href="location.html">Conference Venue</a></li>
+					<li><a href="dinnervenue.html">Dinner Venue</a></li>
+					<li><a href="accom.html">Accommodation</a></li>
+					<li><a href="traveltips.html">Travel Tips</a></li>
+					<li><a href="pictures.html">Pictures</a></li>
+					<li><a href="charter.html">QCRYPT Charter</a></li>
+				</ul></nav>
+			</div>
+		
+			<div id="content">
+				<h2 class="header">Rump Session</h2>
+				<p>The rump session will be held in a 45 min session during the conference dinner. Participants are encouraged to give short presentation on new results from tomorrow’s arXiv, work in progress, and other topics of interest to the QIP community, e.g., workshop announcements. The length of a rump presentation should not be longer than 3min for a presentation and even shorter for an announcement. Interested conference participants are asked to submit a title until Tuesday evening using the form below.</p>
+				<p>The session will be in a relaxed atmosphere by the beach. In order to contribute to this spirit, non-technical and humorous contributions are highly encouraged.</p>
+				<p>Rump Session presentations are submitted via our webpage and a notification email will be sent by Wednesday morning.</p>
+				<p>Session Chair: Valerio Scarani (CQT)</p>
+				
+				
+				
+
+				<p style="text-align: right;"><img height="269" width="226" src="images/sheepSmall.png" alt="QCrypt 2012 Mascot – Entangled Noodles Sheep" /></p>
+				
+			</div><!-- end Content-->
+		</div><!-- end Container-->
+	</div><!-- end Wrap-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1184479-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body></html>

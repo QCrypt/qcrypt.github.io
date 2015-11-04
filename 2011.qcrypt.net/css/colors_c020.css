@@ -1,0 +1,328 @@
+/**********************************/
+/*  CSS ETH WCMS-Templates        */
+/*  copyright 2004 ETH Web Office */
+/*  Author: Y. Serrano            */
+/*  Author: P. Ruetsche           */
+/**********************************/
+/*
+$Id: colors_c020.css 7078 2011-11-03 14:50:58Z yserrano $
+$Rev: 7078 $
+$Release: 1.1.3 $
+*/
+
+/* -------------- COLOR DEFINITiON -------------- */
+/* color1 = 42C6C6 */
+/* color2 = 57CCCC */
+/* color3 = 6ED3D4 */
+/* color4 = 81D9D9 */
+/* color5 = C1EDED */
+
+/* -------------- BACKGROUND COLORS -------------- */
+/* navigation 1. row - color 4 */
+.color4 { color:#81D9D9; }
+.color4-back { background-color:#81D9D9; }
+
+/* navigation 2. row - color 3 */
+.color3 { color:#6ED3D4; }
+.color3-back { background-color:#6ED3D4; }  
+.identity-image { background-color:#6ED3D4; }
+
+/* navigation 3. row - color 2 */
+.color2 { color:#57CCCC; }
+.color2-back { background-color:#57CCCC; }
+
+/* logo and service-navigation - color 1 */
+.color1 { color:#42C6C6; }
+.color1-back { background-color:#42C6C6; }
+
+/* background textareas and inputfields - color 5 */
+.color5 { color:#C1EDED; }
+.color5-back { background-color:#C1EDED; }
+
+/* back for header, only for webcd_apps */
+div#head { background-color: #42C6C6; }
+/* colors */
+.grey { color: #666666; }
+.greylight { color: #CCCCCC; }
+
+/* background*/
+.grey-back {background-color: #F0F0F0; }
+.datagrid .even { background-color:#F0F0F0; }
+
+/* message */
+
+.note { color: #bb0000;}
+
+/* -------------- LINKS -------------- */
+/* Links in general - color 1 */
+a { color:#000000; }
+a:link { color:#000000; }
+a:visited { color:#000000; }
+a:hover { color:#42C6C6; }
+a:active { color:#42C6C6; } 
+a:focus { color:#42C6C6; }
+
+
+
+/* -------------- HEADINGS -------------- */
+/* headings - color 1 for pagetitle */
+h2 { color:#42C6C6; }
+h3 { color:#42C6C6; }
+h4 { color:#000000; }
+h5 { color:#666666; }
+h6 { color:#666666; }
+h7 { color:#666666; }
+
+.boxtitle, .box h3 { color:#42C6C6; }
+.box h4, .box h5, .box h6, .box h7 { color:#000000; }
+
+/* paragraph */
+p.lead { color:#000000;  }
+
+
+/* -------------- FOOTER -------------- */
+/* footer */
+/* div.footertext { color:#666666; border-top:1px solid #CCCCCC; } */
+
+
+
+/* -------------- 3rd COLUMN -------------- */
+/* DIV: boxes 3. coloumn - color 5&4 */
+div.box-border { 
+	border: 1px solid #81D9D9; 
+    background-color: #FFFFFF;
+}
+
+div.box {
+    background-color: #FFFFFF;
+}
+
+
+/* -------------- TABLES -------------- */
+/* tables - color 5 */
+.bg-white { background-color:#FFFFFF; }
+.bg-grey { background-color:#DDDDDD; }
+.bg-lightgrey { background-color:#EBEBEB; }
+caption { 
+	background-color:#FFFFFF; 
+}
+/* th { background-color:#81D9D9; } */
+/* .tablehead { background-color:transparent; } */
+
+
+
+/* -------------- NAVIGATION -------------- */
+/* language */
+a.languagelink { color:#000000; }
+a.languagelink:link { color:#000000; }
+a.languagelink:visited { color:#000000; }
+a.languagelink:hover { color:#81D9D9; } 
+.lang-active { color:#42C6C6; }
+
+
+div.language { color:#000000; }
+
+
+/* path */
+div.pathline { color:#666666;}
+div#path-service { border-bottom:1px solid #CCCCCC; }
+a.path, a.path:visited, a.path:hover, a.path:link {color:#000000; }
+
+/* pageicons-text */
+#pageicons-text { color:#999999; }
+
+/* service-navigation */
+div.servicenav { color:#000000; }
+a.servicenav-off { color:#000000; }
+a.servicenav-off:link { color:#000000; }
+a.servicenav-off:visited { color:#000000; }
+a.servicenav-off:hover { color:#FFFFFF; }
+a.servicenav-on { color:#FFFFFF; }
+a.servicenav-on:link { color:#FFFFFF; }
+a.servicenav-on:visited { color:#FFFFFF; }
+a.servicenav-on:hover { color:#FFFFFF; }
+
+
+/* main-navigation */
+div.mainnav { color:#000000; }
+a.mainnav-off { color:#000000; }
+a.mainnav-off:link { color:#000000; }
+a.mainnav-off:visited { color:#000000; }
+a.mainnav-off:hover { color:#FFFFFF; }
+a.mainnav-on { color:#FFFFFF; }
+a.mainnav-on:link { color:#FFFFFF; }
+a.mainnav-on:visited { color:#FFFFFF; }
+a.mainnav-on:hover { color:#FFFFFF; }
+
+
+/* sub-navigation */
+div.subnav-lev1 { border-bottom:1px solid #CCCCCC; }
+
+/*
+a.subnav-on, .gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl { color:#42C6C6; }
+a.subnav-on:link, .gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl { color:#42C6C6; }
+a.subnav-on:visited, .gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl { color:#42C6C6; }
+a.subnav-off { color:#666666; }
+a.subnav-off:hover { color:#42C6C6; }
+*/
+
+a.subnav-on, .gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl { color:#42C6C6 !important; }
+a.subnav-on:link, .gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl { color:#42C6C6 !important; }
+a.subnav-on:visited, .gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl { color:#42C6C6 !important; }
+a.subnav-off { color:#000000; }
+a.subnav-off:hover { color:#42C6C6; }
+a.subnav-off:visited { color:#000000; }
+
+
+/* -------------- SITEMAP -------------- */
+/* sitemap */
+p.sitemap { color:#666666; }
+.highlited { color:red; }
+a.sitemap-link { color:#000000; }
+a.sitemap-author { color:#999999; }
+
+/* ul { color:#81D9D9; } */
+
+/* -------------- FORMS -------------- */
+/* some doubled definitions because of problems with Netscape 4.7 */
+
+
+/* input fields */
+
+input.text, input.password, textarea {
+	color: #000000;
+	background: #FFFFFF;
+	border: 1px solid #42C6C6;
+}
+
+input[type="text"], input[type="password"] {
+	color: #000000;
+	background: #FFFFFF;
+	border: 1px solid #42C6C6;
+}
+
+
+
+input:focus, textarea:focus, select:focus { 
+	color: #000000; 
+	background: #FFFFFF none; 
+}
+input:hover, textarea:hover, select:hover { 
+	color: #000000; 
+	background: #FFFFFF; 
+} 
+
+
+input.checkbox, input.radio { 
+	color: #000000; 
+	border-style: none; 
+}
+
+input[type="checkbox"], input[type="radio"] { 
+	color: #000000; 
+	border-style: none; 
+} 
+
+input.submit, input.image, input.reset, input.button { 
+    
+	color: #000000; 
+	
+	border: none; 
+    cursor: pointer;
+    
+} 
+
+input[type="submit"], input[type="image"], input[type="reset"], input[type="button"] {
+	color: #000000;
+	background: #C1EDED;
+	border: none;
+
+} 
+
+input[type="submit"]:active, input[type="button"]:active, input[type="image"]:active, input[type="reset"]:active { 
+	background: #2A6AB3; 
+} 
+
+input.submit:active, input.button:active, input.image:active, input.reset:active { 
+	background: #2A6AB3; 
+}
+
+input[type="submit"]:active, input[type="button"]:active, input[type="image"]:active, input[type="reset"]:active { 
+	background: #2A6AB3; 
+} 
+
+input.searchbutton {
+  color: #000000;
+	background: #81D9D9; 
+	border: none;
+}
+
+input.searchbutton:hover {
+  color: #FFFFFF;
+	background: #57CCCC; 
+	border: none;
+}
+
+/* for ie6 hover */
+input.color-notfocus { color: #000000;}
+input.color-focus { color: #ffffff;}
+
+#searchlabel, #searchlabel:hover {
+    color: #000000;
+}
+
+
+input[type="submit"]:hover, input[type="button"]:hover, input[type="image"]:hover, input[type="reset"]:hover, input[type="button"]:hover { 
+  	color: #FFFFFF; 
+  	background: #42C6C6; 
+  	border: none;
+}
+  
+input.submit:hover, input.button:hover, input.image:hover, input.reset:hover, input.button:hover { 
+	color: #FFFFFF; 
+	background: #42C6C6; 
+	border: none;
+} 
+
+input[type="image"] {
+	border: none;
+}
+
+input.image {
+	border: none;
+}
+
+/* select { 
+	color: #333333; 
+	background: #C1EDED; 
+	border: none;
+} */
+
+td > textarea {
+	border: 1px solid #42C6C6;
+} 
+
+a.index-element {
+  text-decoration : none;
+  color: #000000;
+}
+
+h2 a.index-element, h3 a.index-element {
+  color: #42C6C6;
+}
+
+h5 a.index-element, h6 a.index-element {
+  color: #666666;
+}
+
+.citation, blockquote {
+    background-color: #C1EDED;
+}
+
+div.navblock {
+    background-color:#FFFFFF;
+}
+
+p.annotation {
+    border: 1px solid #81D9D9; 
+}
